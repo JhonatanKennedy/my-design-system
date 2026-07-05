@@ -1,0 +1,649 @@
+$bp-md: 768px;
+
+@mixin md {
+  @media (min-width: $bp-md) {
+    @content;
+  }
+}
+
+@mixin container {
+  max-width: 72rem; // 6xl
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@mixin comic-border($width: 3px, $color: var(--ds-border)) {
+  border: $width solid $color;
+}
+
+@mixin comic-shadow($x: 4px, $y: 4px, $color: var(--ds-border)) {
+  box-shadow: #{$x} #{$y} 0px #{$color};
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mono-label {
+  font-family: "Space Mono", monospace;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ds-muted-foreground);
+}
+
+@mixin space-y($size) {
+  > * + * {
+    margin-top: $size;
+  }
+}
+
+.app {
+  min-height: 100vh;
+  background-color: var(--ds-background);
+  color: var(--ds-foreground);
+  font-family: "Comic Neue", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.app__nav {
+  border-bottom: 4px solid var(--ds-border);
+  background-color: var(--ds-primary);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 4px 0px var(--ds-border);
+}
+
+.app__nav-container {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.app__nav-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.app__nav-logo {
+  background-color: var(--ds-border);
+  color: var(--ds-primary);
+  padding: 0.25rem 0.75rem;
+  font-family: "Bangers", cursive;
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+}
+
+.app__nav-title {
+  font-family: "Bangers", cursive;
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.app__nav-links {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+
+  @include md {
+    display: flex;
+  }
+}
+
+.app__nav-link {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.15s ease;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+}
+
+.app__nav-toggle {
+  display: inline-flex;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+
+  @include md {
+    display: none;
+  }
+}
+
+.app__nav-mobile {
+  border-top: 3px solid var(--ds-border);
+  background-color: var(--ds-primary);
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  @include md {
+    display: none;
+  }
+}
+
+.app__nav-mobile-link {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.app__hero {
+  border-bottom: 4px solid var(--ds-border);
+  background-color: var(--ds-secondary);
+  position: relative;
+  overflow: hidden;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include md {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.app__hero-stripes {
+  position: absolute;
+  right: -5rem;
+  top: 0;
+  height: 100%;
+  width: 16rem;
+  opacity: 0.1;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--ds-primary) 0px,
+    var(--ds-primary) 10px,
+    transparent 10px,
+    transparent 30px
+  );
+}
+
+.app__hero-grid {
+  @include container;
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+
+  @include md {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.app__hero-eyebrow {
+  display: inline-block;
+  background-color: var(--ds-accent);
+  color: #fff;
+  padding: 0.25rem 1rem;
+  border: 3px solid var(--ds-border);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  @include comic-shadow(3px, 3px);
+}
+
+.app__hero-title {
+  font-family: "Bangers", cursive;
+  font-size: 6rem;
+  color: #fff;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  margin-bottom: 1rem;
+  -webkit-text-stroke: 2.5px var(--ds-border);
+  text-shadow: 6px 6px 0px var(--ds-border);
+
+  @include md {
+    font-size: 9rem;
+  }
+}
+
+.app__hero-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 28rem;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.app__hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.app__hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.app__hero-bubble-1 {
+  transform: rotate(-2deg);
+}
+
+.app__hero-bubble-2 {
+  transform: rotate(1deg);
+  align-self: flex-end;
+  margin-top: 1.5rem;
+}
+
+.app__hero-burst {
+  position: absolute;
+  top: -1.5rem;
+  right: -0.5rem;
+  pointer-events: none;
+}
+
+.app__hero-burst-shape {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--ds-accent);
+  border: 3px solid var(--ds-border);
+  @include flex-center;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.app__hero-burst-text {
+  font-family: "Bangers", cursive;
+  color: #fff;
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  -webkit-text-stroke: 0px;
+}
+
+// ── CONTENT WRAPPER ──────────────────────────────────────────
+.app__content {
+  @include container;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  @include space-y(6rem);
+}
+
+.app__label {
+  @include mono-label;
+  margin-bottom: 0.5rem;
+
+  &--lg {
+    margin-bottom: 0.75rem;
+  }
+
+  &--panel {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.app__stack-5 {
+  @include space-y(1.25rem);
+}
+.app__stack-7 {
+  @include space-y(1.75rem);
+}
+.app__stack-4 {
+  @include space-y(1rem);
+}
+.app__stack-3 {
+  @include space-y(0.75rem);
+}
+
+.app__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.app__row--center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+.app__row--gap4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app__icon-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &--tight {
+    gap: 0.375rem;
+  }
+}
+
+.app__color-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+
+  @include md {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.app__color-card {
+  @include comic-border(3px);
+  @include comic-shadow(4px, 4px);
+  overflow: hidden;
+}
+
+.app__color-swatch {
+  height: 6rem;
+}
+
+.app__color-body {
+  padding: 0.75rem;
+  background-color: #fff;
+}
+
+.app__color-name {
+  font-weight: 900;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.app__color-hex {
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  color: var(--ds-muted-foreground);
+  margin-bottom: 0.5rem;
+}
+
+.app__type-block {
+  border-bottom: 2px solid color-mix(in srgb, var(--ds-border) 15%, transparent);
+  padding-bottom: 1.25rem;
+}
+
+.app__type-display {
+  font-family: "Bangers", cursive;
+  font-size: 3.75rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.app__type-heading {
+  font-weight: 900;
+  font-size: 1.875rem;
+}
+
+.app__type-body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.app__type-mono {
+  font-family: "Space Mono", monospace;
+  font-size: 0.875rem;
+}
+
+.app__card-grid {
+  display: grid;
+  gap: 1.5rem;
+
+  @include md {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.app__card-body {
+  padding-top: 0.25rem;
+}
+
+.app__card-title {
+  font-family: "Bangers", cursive;
+  font-size: 1.875rem;
+  letter-spacing: 0.025em;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+
+  &--tight {
+    margin-top: 0;
+  }
+}
+
+.app__card-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ds-muted-foreground);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.app__card-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.app__heart-icon {
+  color: var(--ds-accent);
+  fill: var(--ds-accent);
+}
+
+.app__form-grid {
+  display: grid;
+  gap: 1.5rem;
+
+  @include md {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.app__form-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.app__bubble-stack {
+  @include space-y(3rem);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.app__bubble-row {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-end;
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.app__avatar {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 3px solid var(--ds-border);
+  @include comic-shadow(3px, 3px);
+  border-radius: 50%;
+  @include flex-center;
+  color: #fff;
+  font-family: "Bangers", cursive;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
+
+.app__bubble-wrap {
+  max-width: 28rem;
+
+  &--rotate-neg {
+    transform: rotate(-1deg);
+  }
+  &--rotate-pos {
+    transform: rotate(1deg);
+  }
+  &--sm {
+    max-width: 24rem;
+  }
+}
+
+.app__bubble-text {
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.4;
+
+  &--white {
+    color: #fff;
+  }
+}
+
+.app__controls-grid {
+  display: grid;
+  gap: 1.5rem;
+
+  @include md {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.app__panel-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid color-mix(in srgb, var(--ds-border) 10%, transparent);
+}
+
+.app__panel-footer-text {
+  font-family: "Space Mono", monospace;
+  font-size: 0.625rem;
+  color: var(--ds-muted-foreground);
+}
+
+.app__progress-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.app__onom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+
+  @include md {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.app__footer {
+  border-top: 4px solid var(--ds-border);
+  background-color: var(--ds-border);
+  color: var(--ds-primary);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.app__footer-inner {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 10;
+
+  @include md {
+    flex-direction: row;
+  }
+}
+
+.app__footer-brand {
+  font-family: "Bangers", cursive;
+  font-size: 2.25rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.25rem;
+}
+
+.app__footer-tagline {
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  color: color-mix(in srgb, var(--ds-primary) 60%, transparent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.app__footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.app__footer-credit {
+  font-weight: 900;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.app__footer-copy {
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  color: color-mix(in srgb, var(--ds-primary) 60%, transparent);
+}
+
+.app__footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.app__footer-link {
+  font-weight: 900;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: #fff;
+  }
+}

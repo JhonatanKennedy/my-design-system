@@ -1,0 +1,56 @@
+@use "sass:map";
+@use "sass:color";
+@use "brand" as b;
+@use "functions" as fn;
+
+@forward "brand";
+@forward "functions";
+
+$roles: primary, secondary, accent, destructive, success, info;
+
+$palettes: (
+  primary: fn.make-scale(b.$primary),
+  secondary: fn.make-scale(b.$secondary),
+  accent: fn.make-scale(b.$accent),
+  destructive: fn.make-scale(b.$destructive),
+  success: fn.make-scale(b.$success),
+  info: fn.make-scale(b.$info),
+  neutral: fn.make-scale(b.$neutral),
+);
+
+$neutral-scale: map.get($palettes, neutral);
+$paper-light-scale: fn.make-scale(b.$paper-light);
+$paper-dark-scale: fn.make-scale(b.$paper-dark);
+
+@function semantic-tokens($mode: light) {
+  $tokens: ();
+
+  @each $role in $roles {
+    $scale: map.get($palettes, $role);
+    $base: map.get($scale, 500);
+
+    @if $mode ==
+      dark and
+      ($role == secondary or $role == accent or $role == destructive)
+    {
+      $base: fn.make-dark-friendly($base);
+    }
+
+    $foreground: white;
+    @if color.channel($base, "lightness", $space: hsl) > 60% {
+      $foreground: b.$neutral;
+    }
+
+    $tokens: map.merge(
+      $tokens,
+      (
+        "#{$role}": $base,
+        "#{$role}-light": map.get($scale, 200),
+        "#{$role}-dark": map.get($scale, 700),
+        "#{$role}-foreground": $foreground,
+      )
+    );
+  }
+
+  @return $tokens;
+}

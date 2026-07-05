@@ -1,0 +1,50 @@
+.bubble {
+  position: relative;
+  border: 3px solid var(--ds-border);
+  padding: 1rem;
+  box-shadow: 4px 4px 0px var(--ds-border);
+}
+
+// Rabicho externo (cor da borda ink)
+.tailOuter {
+  position: absolute;
+  bottom: -17px;
+  width: 0;
+  height: 0;
+  display: block;
+  border-top: 18px solid var(--ds-border);
+}
+
+.tailOuterLeft {
+  left: 20px;
+  border-left: 14px solid var(--ds-border);
+  border-right: 4px solid transparent;
+}
+
+.tailOuterRight {
+  right: 20px;
+  border-left: 4px solid transparent;
+  border-right: 14px solid var(--ds-border);
+}
+
+// Rabicho interno (recorte branco por cima do externo)
+.tailInner {
+  position: absolute;
+  bottom: -12px;
+  width: 0;
+  height: 0;
+  display: block;
+  border-top: 14px solid #ffffff;
+}
+
+.tailInnerLeft {
+  left: 23px;
+  border-left: 11px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.tailInnerRight {
+  right: 23px;
+  border-left: 2px solid transparent;
+  border-right: 11px solid transparent;
+}

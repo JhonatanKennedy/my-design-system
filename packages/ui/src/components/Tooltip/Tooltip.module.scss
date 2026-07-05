@@ -1,0 +1,22 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bubble {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 4px 12px;
+  font-family: "Bangers", cursive;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  background: var(--ds-border);
+  color: #ffe600;
+  border: 2.5px solid var(--ds-border);
+  box-shadow: 3px 3px 0 #ff2020;
+  z-index: 20;
+}

@@ -1,0 +1,36 @@
+@use "sass:map";
+@use "../tokens" as t;
+
+$light-theme: map.merge(
+  t.semantic-tokens(light),
+  (
+    background: t.$paper-light,
+    foreground: t.$neutral,
+
+    card: map.get(t.$paper-light-scale, 50),
+    card-foreground: t.$neutral,
+    popover: map.get(t.$paper-light-scale, 50),
+    popover-foreground: t.$neutral,
+    muted: map.get(t.$paper-light-scale, 200),
+    muted-foreground: map.get(t.$paper-light-scale, 700),
+    border: t.$neutral,
+    input: transparent,
+    input-background: map.get(t.$paper-light-scale, 50),
+    switch-background: map.get(t.$neutral-scale, 300),
+    ring: t.$primary,
+    chart-1: t.$primary,
+    chart-2: t.$secondary,
+    chart-3: t.$accent,
+    chart-4: t.$success,
+    chart-5: t.$info,
+
+    sidebar: t.$neutral,
+    sidebar-foreground: t.$primary,
+    sidebar-primary: t.$primary,
+    sidebar-primary-foreground: t.$neutral,
+    sidebar-accent: map.get(t.$neutral-scale, 700),
+    sidebar-accent-foreground: t.$primary,
+    sidebar-border: map.get(t.$neutral-scale, 600),
+    sidebar-ring: t.$primary,
+  )
+);

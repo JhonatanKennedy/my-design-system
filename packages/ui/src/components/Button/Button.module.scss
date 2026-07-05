@@ -1,0 +1,80 @@
+@mixin comicShadow($color: var(--ds-border)) {
+  box-shadow: 4px 4px 0px $color;
+
+  &:active {
+    box-shadow: 2px 2px 0px $color;
+    transform: translate(2px, 2px);
+  }
+}
+
+.button {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 3px solid var(--ds-border);
+  position: relative;
+  transition: all 75ms ease;
+  cursor: pointer;
+  user-select: none;
+
+  &:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+  }
+}
+
+.primary {
+  background-color: var(--ds-primary);
+  color: var(--ds-border);
+  @include comicShadow;
+}
+
+.secondary {
+  background-color: var(--ds-secondary);
+  color: #fff;
+  @include comicShadow;
+}
+
+.danger {
+  background-color: var(--ds-accent);
+  color: #fff;
+  @include comicShadow;
+}
+
+.success {
+  background-color: var(--ds-success);
+  color: #fff;
+  @include comicShadow;
+}
+
+.purple {
+  background-color: var(--ds-info);
+  color: #fff;
+  @include comicShadow;
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--ds-border);
+  border-color: var(--ds-border);
+  @include comicShadow;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--ds-primary) 30%, transparent);
+  }
+}
+
+.sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.md {
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+}
+
+.lg {
+  padding: 0.875rem 1.75rem;
+  font-size: 1.125rem;
+}

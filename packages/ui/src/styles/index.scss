@@ -1,0 +1,24 @@
+@use "tokens" as t;
+@use "themes/light" as light;
+@use "themes/dark" as dark;
+@use "mixins" as m;
+@use "_fonts.scss";
+
+@forward "tokens";
+
+@use "utilities";
+
+:root {
+  --ds-font-size: #{t.$font-size-base};
+  @include m.emit-theme(light.$light-theme, "ds-");
+  --ds-font-weight-medium: #{t.$font-weight-medium};
+  --ds-font-weight-normal: #{t.$font-weight-normal};
+  --ds-radius: #{t.$radius};
+  --ds-font-family: #{t.$font-family-base};
+}
+
+.dark {
+  @include m.emit-theme(dark.$dark-theme, "ds-");
+  --ds-font-weight-medium: #{t.$font-weight-medium};
+  --ds-font-weight-normal: #{t.$font-weight-normal};
+}
