@@ -29,10 +29,7 @@ $paper-dark-scale: fn.make-scale(b.$paper-dark);
     $scale: map.get($palettes, $role);
     $base: map.get($scale, 500);
 
-    @if $mode ==
-      dark and
-      ($role == secondary or $role == accent or $role == destructive)
-    {
+    @if $mode == dark and color.channel($base, "lightness", $space: hsl) < 50% {
       $base: fn.make-dark-friendly($base);
     }
 

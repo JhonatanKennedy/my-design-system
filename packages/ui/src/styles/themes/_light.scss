@@ -14,7 +14,7 @@ $light-theme: map.merge(
     muted: map.get(t.$paper-light-scale, 200),
     muted-foreground: map.get(t.$paper-light-scale, 700),
     border: t.$neutral,
-    input: transparent,
+    input-border: transparent,
     input-background: map.get(t.$paper-light-scale, 50),
     switch-background: map.get(t.$neutral-scale, 300),
     ring: t.$primary,
@@ -25,11 +25,11 @@ $light-theme: map.merge(
     chart-5: t.$info,
 
     sidebar: t.$neutral,
-    sidebar-foreground: t.$primary,
+    sidebar-foreground: t.$paper-light,
     sidebar-primary: t.$primary,
     sidebar-primary-foreground: t.$neutral,
     sidebar-accent: map.get(t.$neutral-scale, 700),
-    sidebar-accent-foreground: t.$primary,
+    sidebar-accent-foreground: t.$paper-light,
     sidebar-border: map.get(t.$neutral-scale, 600),
     sidebar-ring: t.$primary,
   )

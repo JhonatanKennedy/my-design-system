@@ -1,6 +1,6 @@
 $primary: #fcd12a !default;
 $secondary: #0057ff !default;
-$accent: #ff2d2d !default;
+$accent: #d946ef !default;
 $destructive: #ff2d2d !default;
 $success: #22c55e !default;
 $info: #8b5cf6 !default;
@@ -14,4 +14,7 @@ $font-size-base: 16px !default;
 $font-weight-normal: 400 !default;
 $font-weight-medium: 700 !default;
 $radius: 0px !default;
-$font-family-base: "Bangers", cursive !default;
+
+$font-family-display: "Bangers", cursive !default;
+$font-family-body: "Comic Neue", sans-serif !default;
+$font-family-mono: "Space Mono", monospace !default;

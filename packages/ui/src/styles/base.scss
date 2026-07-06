@@ -1,11 +1,11 @@
 html {
-  font-family: var(--ds-font-family);
+  font-family: var(--ds-font-family-body);
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-weight: var(--font-weight-normal);
+  background-color: var(--ds-background);
+  color: var(--ds-foreground);
+  font-weight: var(--ds-font-weight-normal);
   margin: 0;
 }
 
@@ -13,7 +13,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: var(--font-weight-medium);
+  font-family: var(--ds-font-family-display);
+  font-weight: var(--ds-font-weight-medium);
   line-height: 1.5;
 }
 
@@ -33,14 +34,15 @@ h4 {
 label,
 button {
   font-size: 1rem;
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--ds-font-weight-medium);
   line-height: 1.5;
 }
 
 input {
   font-size: 1rem;
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--ds-font-weight-normal);
   line-height: 1.5;
-  background-color: var(--input-background);
-  border: 1px solid var(--border);
+  color: var(--ds-foreground);
+  background-color: var(--ds-input-background);
+  border: 1px solid var(--ds-input-border);
 }
