@@ -21,6 +21,12 @@
     transform: translate(4px, 4px);
     box-shadow: none;
   }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }
 
 .primary {

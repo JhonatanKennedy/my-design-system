@@ -16,6 +16,11 @@
     background 150ms ease,
     box-shadow 150ms ease;
   flex-shrink: 0;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
 
 .trackOn {

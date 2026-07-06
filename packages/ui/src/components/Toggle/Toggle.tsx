@@ -4,13 +4,20 @@ export interface IToggleProps {
   checked: boolean;
   onChange: () => void;
   label?: string;
+  disabled?: boolean;
 }
 
-export function Toggle({ checked, onChange, label }: IToggleProps) {
+export function Toggle({
+  checked,
+  onChange,
+  label,
+  disabled = false,
+}: IToggleProps) {
   return (
     <div className={styles.wrapper}>
       <button
         onClick={onChange}
+        disabled={disabled}
         role="switch"
         aria-checked={checked}
         className={`${styles.track} ${checked ? styles.trackOn : ""}`}

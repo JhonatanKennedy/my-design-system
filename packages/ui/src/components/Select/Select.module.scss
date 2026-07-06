@@ -16,7 +16,7 @@
   box-sizing: border-box;
   height: 50px;
   border: 3px solid var(--ds-border);
-  background-color: #ffffff;
+  background-color: var(--ds-input-background);
   padding: 0 2.5rem 0 1rem;
   font-weight: 500;
   font-family: "Comic Neue", sans-serif;
@@ -35,4 +35,28 @@
     box-shadow: 4px 4px 0px var(--ds-border);
     transform: translate(-1px, -1px);
   }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--ds-muted);
+  }
+}
+
+.selectError {
+  border-color: var(--ds-accent);
+
+  &:focus {
+    box-shadow: 4px 4px 0px var(--ds-accent);
+  }
+}
+
+.helperText {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ds-muted-foreground);
+}
+
+.errorMessage {
+  color: var(--ds-accent);
 }

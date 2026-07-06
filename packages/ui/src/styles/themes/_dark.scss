@@ -18,7 +18,7 @@ $dark-theme: map.merge(
     popover-foreground: t.$paper-light,
     muted: map.get(t.$paper-dark-scale, 400),
     muted-foreground: map.get(t.$paper-dark-scale, 100),
-    border: map.get(t.$paper-dark-scale, 600),
+    border: map.get(t.$paper-dark-scale, 300),
     input-border: map.get(t.$paper-dark-scale, 300),
     input-background: map.get(t.$paper-dark-scale, 400),
     switch-background: map.get(t.$neutral-scale, 600),
