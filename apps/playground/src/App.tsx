@@ -282,7 +282,7 @@ function App() {
                   máximo, recompensa máxima.
                 </p>
                 <div>
-                  <Progress value={42} color={BLUE} />
+                  <Progress value={42} variant="secondary" />
                 </div>
               </div>
             </Card>
@@ -389,7 +389,11 @@ function App() {
         <section>
           <SectionTitle number="07" title="Alertas" />
           <div className="app__stack-3">
-            <Alert variant="info" title="Nova missão disponível!">
+            <Alert
+              variant="info"
+              title="Nova missão disponível!"
+              onDismiss={() => null}
+            >
               Setor norte precisa de reforços. Confirme disponibilidade até as
               18h de hoje.
             </Alert>
@@ -495,10 +499,14 @@ function App() {
                 Barras de Progresso
               </p>
               <div className="app__stack-4">
-                <Progress value={power} color={YELLOW} label="Nível de Poder" />
-                <Progress value={75} color={GREEN} label="Saúde" />
-                <Progress value={32} color={RED} label="Energia" />
-                <Progress value={88} color={BLUE} label="Escudo" />
+                <Progress
+                  value={power}
+                  variant="primary"
+                  label="Nível de Poder"
+                />
+                <Progress value={75} variant="success" label="Saúde" />
+                <Progress value={32} variant="danger" label="Energia" />
+                <Progress value={88} variant="secondary" label="Escudo" />
                 <div className="app__progress-actions">
                   <Button
                     size="sm"

@@ -6,6 +6,11 @@
   position: relative;
 }
 
+.selected {
+  border-color: var(--ds-primary);
+  box-shadow: 5px 5px 0px var(--ds-primary);
+}
+
 .accent {
   position: absolute;
   top: 0;

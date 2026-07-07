@@ -8,6 +8,7 @@ export interface IAlertProps {
   variant?: TAlertVariant;
   title?: string;
   children: ReactNode;
+  onDismiss?: () => void;
 }
 
 const ALERT_ICON: Record<TAlertVariant, ReactNode> = {
@@ -24,14 +25,29 @@ const VARIANT_CLASS: Record<TAlertVariant, string> = {
   warning: styles.warning,
 };
 
-export function Alert({ variant = "info", title, children }: IAlertProps) {
+export function Alert({
+  variant = "info",
+  title,
+  children,
+  onDismiss,
+}: IAlertProps) {
   return (
     <div className={`${styles.alert} ${VARIANT_CLASS[variant]}`}>
       <span className={styles.icon}>{ALERT_ICON[variant]}</span>
-      <div>
+      <div className={styles.content}>
         {title && <p className={styles.title}>{title}</p>}
         <p className={styles.message}>{children}</p>
       </div>
+      {onDismiss && (
+        <button
+          type="button"
+          className={styles.dismiss}
+          onClick={onDismiss}
+          aria-label="Fechar"
+        >
+          <X size={16} />
+        </button>
+      )}
     </div>
   );
 }

@@ -6,6 +6,7 @@ export interface ICardProps {
   className?: string;
   rotation?: number;
   accent?: string;
+  selected?: boolean;
 }
 
 export function Card({
@@ -13,10 +14,11 @@ export function Card({
   className = "",
   rotation = 0,
   accent,
+  selected = false,
 }: ICardProps) {
   return (
     <div
-      className={`${styles.card} ${className}`}
+      className={`${styles.card} ${selected ? styles.selected : ""} ${className}`}
       style={{ transform: rotation ? `rotate(${rotation}deg)` : undefined }}
     >
       {accent && (

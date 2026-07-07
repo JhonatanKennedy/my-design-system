@@ -1,3 +1,9 @@
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
 .avatar {
   border: 3px solid var(--ds-border);
   box-shadow: 3px 3px 0 var(--ds-border);
@@ -7,4 +13,26 @@
   font-family: "Bangers", cursive;
   letter-spacing: 0.05em;
   flex-shrink: 0;
+}
+
+.status {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 2px solid var(--ds-card);
+  border-radius: 50%;
+}
+
+.online {
+  background-color: var(--ds-success);
+}
+
+.offline {
+  background-color: var(--ds-border);
+}
+
+.away {
+  background-color: var(--ds-primary);
 }
