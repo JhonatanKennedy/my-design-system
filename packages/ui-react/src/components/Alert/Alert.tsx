@@ -8,6 +8,7 @@ export interface IAlertProps {
   variant?: TAlertVariant;
   title?: string;
   children: ReactNode;
+  open: boolean;
   onDismiss?: () => void;
 }
 
@@ -28,9 +29,12 @@ const VARIANT_CLASS: Record<TAlertVariant, string> = {
 export function Alert({
   variant = "info",
   title,
+  open,
   children,
   onDismiss,
 }: IAlertProps) {
+  if (!open) return;
+
   return (
     <div className={`${styles.alert} ${VARIANT_CLASS[variant]}`}>
       <span className={styles.icon}>{ALERT_ICON[variant]}</span>

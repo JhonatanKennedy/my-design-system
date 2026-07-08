@@ -1,0 +1,98 @@
+.button {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 3px solid var(--ds-border);
+  position: relative;
+  transition: all 75ms ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.primary {
+  background-color: var(--ds-primary);
+  color: var(--ds-border);
+  box-shadow: 4px 4px 0px var(--ds-border);
+}
+.primary:active {
+  box-shadow: 2px 2px 0px var(--ds-border);
+  transform: translate(2px, 2px);
+}
+
+.secondary {
+  background-color: var(--ds-secondary);
+  color: #fff;
+  box-shadow: 4px 4px 0px var(--ds-border);
+}
+.secondary:active {
+  box-shadow: 2px 2px 0px var(--ds-border);
+  transform: translate(2px, 2px);
+}
+
+.danger {
+  background-color: var(--ds-accent);
+  color: #fff;
+  box-shadow: 4px 4px 0px var(--ds-border);
+}
+.danger:active {
+  box-shadow: 2px 2px 0px var(--ds-border);
+  transform: translate(2px, 2px);
+}
+
+.success {
+  background-color: var(--ds-success);
+  color: #fff;
+  box-shadow: 4px 4px 0px var(--ds-border);
+}
+.success:active {
+  box-shadow: 2px 2px 0px var(--ds-border);
+  transform: translate(2px, 2px);
+}
+
+.purple {
+  background-color: var(--ds-info);
+  color: #fff;
+  box-shadow: 4px 4px 0px var(--ds-border);
+}
+.purple:active {
+  box-shadow: 2px 2px 0px var(--ds-border);
+  transform: translate(2px, 2px);
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--ds-border);
+  border-color: var(--ds-border);
+  box-shadow: 4px 4px 0px var(--ds-border);
+}
+.ghost:active {
+  box-shadow: 2px 2px 0px var(--ds-border);
+  transform: translate(2px, 2px);
+}
+.ghost:hover {
+  background-color: color-mix(in srgb, var(--ds-primary) 30%, transparent);
+}
+
+.sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+.md {
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+}
+.lg {
+  padding: 0.875rem 1.75rem;
+  font-size: 1.125rem;
+}

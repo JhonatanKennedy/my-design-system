@@ -26,7 +26,7 @@ import {
   Avatar,
   Select,
   useTheme,
-} from "@my-design-system/ui";
+} from "@my-design-system/ui-react";
 
 const INK = "#0D0D0D";
 const YELLOW = "#FCD12A";
@@ -390,6 +390,7 @@ function App() {
           <SectionTitle number="07" title="Alertas" />
           <div className="app__stack-3">
             <Alert
+              open
               variant="info"
               title="Nova missão disponível!"
               onDismiss={() => null}
@@ -397,15 +398,15 @@ function App() {
               Setor norte precisa de reforços. Confirme disponibilidade até as
               18h de hoje.
             </Alert>
-            <Alert variant="warning" title="Atenção, herói!">
+            <Alert open variant="warning" title="Atenção, herói!">
               Combustível do jato abaixo de 30%. Reabasteça antes da próxima
               missão.
             </Alert>
-            <Alert variant="danger" title="PERIGO MÁXIMO!">
+            <Alert open variant="danger" title="PERIGO MÁXIMO!">
               Intruso detectado no perímetro. Acione o protocolo de segurança
               imediatamente!
             </Alert>
-            <Alert variant="success" title="Missão cumprida!">
+            <Alert open variant="success" title="Missão cumprida!">
               Todos os objetivos completados. Retorno seguro ao quartel.
               Parabéns, herói!
             </Alert>

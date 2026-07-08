@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@my-design-system/ui": "workspace:*",
+    "@my-design-system/ui-react": "workspace:*",
     "lucide-react": "0.487.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"

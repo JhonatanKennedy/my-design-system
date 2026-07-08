@@ -1,0 +1,29 @@
+{
+  "name": "@my-design-system/ui-core",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./types": "./src/index.types.ts"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "lit": "^3.3.3",
+    "lucide-static": "^1.23.0"
+  },
+  "devDependencies": {
+    "@vitest/browser": "^4.1.10",
+    "playwright": "^1.61.1",
+    "sass": "^1.101.0",
+    "typescript": "~6.0.3",
+    "vite": "^8.1.1",
+    "vitest": "^4.1.10"
+  }
+}

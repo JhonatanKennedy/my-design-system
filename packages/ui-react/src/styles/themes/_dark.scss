@@ -1,0 +1,40 @@
+@use "sass:map";
+@use "../tokens" as t;
+
+// Tom customizado pro "card"/"popover": um passo acima do tint fixo de 400
+// usado no muted, criando uma hierarquia de elevação real
+// (background < muted < card) mantendo contraste AA (~5.7:1) com o texto claro.
+$dark-elevated: t.tint(t.$paper-dark, 34%);
+
+$dark-theme: map.merge(
+  t.semantic-tokens(dark),
+  (
+    background: t.$paper-dark,
+    foreground: t.$paper-light,
+
+    card: $dark-elevated,
+    card-foreground: t.$paper-light,
+    popover: $dark-elevated,
+    popover-foreground: t.$paper-light,
+    muted: map.get(t.$paper-dark-scale, 400),
+    muted-foreground: map.get(t.$paper-dark-scale, 100),
+    border: map.get(t.$paper-dark-scale, 300),
+    input-border: map.get(t.$paper-dark-scale, 300),
+    input-background: map.get(t.$paper-dark-scale, 400),
+    switch-background: map.get(t.$neutral-scale, 600),
+    ring: t.$primary,
+    chart-1: t.$primary,
+    chart-2: t.make-dark-friendly(t.$secondary),
+    chart-3: t.make-dark-friendly(t.$accent),
+    chart-4: t.$success,
+    chart-5: t.tint(t.$info, 10%),
+    sidebar: t.$neutral,
+    sidebar-foreground: t.$paper-light,
+    sidebar-primary: t.$primary,
+    sidebar-primary-foreground: t.$neutral,
+    sidebar-accent: map.get(t.$neutral-scale, 700),
+    sidebar-accent-foreground: t.$paper-light,
+    sidebar-border: map.get(t.$neutral-scale, 600),
+    sidebar-ring: t.$primary,
+  )
+);
