@@ -32,7 +32,9 @@ export default tseslint.config(
         ...globals.node,
       },
       parserOptions: {
-        projectService: true,
+        projectService: {
+          allowDefaultProject: ["packages/*/vite.config.ts", "apps/*/vite.config.ts"],
+        },
         tsconfigRootDir: import.meta.dirname,
       },
     },

@@ -350,7 +350,13 @@ function App() {
         <section>
           <SectionTitle number="07" title="Alertas" />
           <div className="app__stack-3">
-            <Alert open variant="info" title="Nova missão disponível!" onDismiss={() => null}>
+            <Alert
+              open
+              variant="info"
+              title="Nova missão disponível!"
+              dismissible
+              onDismiss={() => console.log("dismiss")}
+            >
               Setor norte precisa de reforços. Confirme disponibilidade até as 18h de hoje.
             </Alert>
             <Alert open variant="warning" title="Atenção, herói!">
