@@ -7,12 +7,7 @@ export interface IToggleProps {
   disabled?: boolean;
 }
 
-export function Toggle({
-  checked,
-  onChange,
-  label,
-  disabled = false,
-}: IToggleProps) {
+export function Toggle({ checked, onChange, label, disabled = false }: IToggleProps) {
   return (
     <div className={styles.wrapper}>
       <button

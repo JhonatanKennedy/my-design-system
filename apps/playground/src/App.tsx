@@ -1,16 +1,6 @@
 import "./App.scss";
 import { useState } from "react";
-import {
-  Check,
-  X,
-  Star,
-  Zap,
-  Heart,
-  ArrowRight,
-  Menu,
-  Sparkles,
-  Shield,
-} from "lucide-react";
+import { Check, X, Star, Zap, Heart, ArrowRight, Menu, Sparkles, Shield } from "lucide-react";
 import {
   Alert,
   Badge,
@@ -60,10 +50,7 @@ function App() {
             ))}
             <Toggle checked={isDark} onChange={toggleTheme} label="Dark mode" />
           </div>
-          <button
-            className="app__nav-toggle"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
+          <button className="app__nav-toggle" onClick={() => setMobileOpen(!mobileOpen)}>
             <Menu size={24} />
           </button>
         </div>
@@ -80,12 +67,7 @@ function App() {
 
       {/* ── HERO ── */}
       <section className="app__hero">
-        <Halftone
-          className="inset-0 w-full h-full"
-          color="#FFFFFF"
-          opacity={0.06}
-          size={16}
-        />
+        <Halftone className="inset-0 w-full h-full" color="#FFFFFF" opacity={0.06} size={16} />
         {/* diagonal stripe deco */}
         <div className="app__hero-stripes" />
 
@@ -95,8 +77,8 @@ function App() {
             <div className="app__hero-eyebrow">Design System</div>
             <h1 className="app__hero-title">INK UI</h1>
             <p className="app__hero-text">
-              Design system com alma de quadrinhos. Traços ousados, sombras
-              offset e tipografia expressiva para qualquer projeto.
+              Design system com alma de quadrinhos. Traços ousados, sombras offset e tipografia
+              expressiva para qualquer projeto.
             </p>
             <div className="app__hero-actions">
               <Button size="lg">
@@ -114,16 +96,12 @@ function App() {
           <div className="app__hero-right">
             <div className="app__hero-bubble-1">
               <SpeechBubble direction="left">
-                <p className="app__bubble-text">
-                  POW! Componentes que chamam atenção!
-                </p>
+                <p className="app__bubble-text">POW! Componentes que chamam atenção!</p>
               </SpeechBubble>
             </div>
             <div className="app__hero-bubble-2">
               <SpeechBubble direction="right" bg="bg-[#FCD12A]">
-                <p className="app__bubble-text">
-                  100% customizável. Zero lorem ipsum.
-                </p>
+                <p className="app__bubble-text">100% customizável. Zero lorem ipsum.</p>
               </SpeechBubble>
             </div>
 
@@ -151,10 +129,7 @@ function App() {
               { name: "Tinta", hex: INK, label: "Foreground", dark: true },
             ].map((c) => (
               <div key={c.name} className="app__color-card">
-                <div
-                  className="app__color-swatch"
-                  style={{ backgroundColor: c.hex }}
-                />
+                <div className="app__color-swatch" style={{ backgroundColor: c.hex }} />
                 <div className="app__color-body">
                   <p className="app__color-name">{c.name}</p>
                   <p className="app__color-hex">{c.hex}</p>
@@ -181,10 +156,9 @@ function App() {
               <div className="app__type-block">
                 <p className="app__label">Body · Comic Neue Regular</p>
                 <p className="app__type-body">
-                  Texto de corpo com boa legibilidade. O Comic Neue mantém o
-                  charme hand-drawn sem sacrificar a leitura em blocos de texto
-                  corrido. Ideal para parágrafos, descrições e conteúdo
-                  editorial.
+                  Texto de corpo com boa legibilidade. O Comic Neue mantém o charme hand-drawn sem
+                  sacrificar a leitura em blocos de texto corrido. Ideal para parágrafos, descrições
+                  e conteúdo editorial.
                 </p>
               </div>
               <div>
@@ -264,8 +238,8 @@ function App() {
                 <Badge variant="primary">Novo</Badge>
                 <h3 className="app__card-title">Herói da Ação</h3>
                 <p className="app__card-text">
-                  Personagem com habilidades especiais e poderes extraordinários
-                  para missões impossíveis.
+                  Personagem com habilidades especiais e poderes extraordinários para missões
+                  impossíveis.
                 </p>
                 <Button size="sm" variant="primary">
                   Ver mais
@@ -278,8 +252,8 @@ function App() {
                 <Badge variant="secondary">Em andamento</Badge>
                 <h3 className="app__card-title">Missão Secreta</h3>
                 <p className="app__card-text">
-                  Infiltração de alto risco no quartel general inimigo. Risco
-                  máximo, recompensa máxima.
+                  Infiltração de alto risco no quartel general inimigo. Risco máximo, recompensa
+                  máxima.
                 </p>
                 <div>
                   <Progress value={42} variant="secondary" />
@@ -293,12 +267,10 @@ function App() {
                   <Badge variant="success">Completo</Badge>
                   <Heart size={20} className="app__heart-icon" />
                 </div>
-                <h3 className="app__card-title app__card-title--tight">
-                  Operação Vitória
-                </h3>
+                <h3 className="app__card-title app__card-title--tight">Operação Vitória</h3>
                 <p className="app__card-text">
-                  Missão cumprida com sucesso. Todos os objetivos alcançados.
-                  Retorno ao quartel base.
+                  Missão cumprida com sucesso. Todos os objetivos alcançados. Retorno ao quartel
+                  base.
                 </p>
                 <Button size="sm" variant="success">
                   <span className="app__icon-label app__icon-label--tight">
@@ -350,20 +322,9 @@ function App() {
           <Card>
             <div className="app__form-grid">
               <Input label="Nome do herói" placeholder="Ex: Peter Parker" />
-              <Input
-                label="Superpoder"
-                placeholder="Ex: Aranha, força, velocidade"
-              />
-              <Input
-                label="Email"
-                placeholder="heroi@universo.com"
-                type="email"
-              />
-              <Input
-                label="Senha secreta"
-                placeholder="••••••••"
-                type="password"
-              />
+              <Input label="Superpoder" placeholder="Ex: Aranha, força, velocidade" />
+              <Input label="Email" placeholder="heroi@universo.com" type="email" />
+              <Input label="Senha secreta" placeholder="••••••••" type="password" />
               <Select
                 label="Power Class"
                 options={[
@@ -389,26 +350,17 @@ function App() {
         <section>
           <SectionTitle number="07" title="Alertas" />
           <div className="app__stack-3">
-            <Alert
-              open
-              variant="info"
-              title="Nova missão disponível!"
-              onDismiss={() => null}
-            >
-              Setor norte precisa de reforços. Confirme disponibilidade até as
-              18h de hoje.
+            <Alert open variant="info" title="Nova missão disponível!" onDismiss={() => null}>
+              Setor norte precisa de reforços. Confirme disponibilidade até as 18h de hoje.
             </Alert>
             <Alert open variant="warning" title="Atenção, herói!">
-              Combustível do jato abaixo de 30%. Reabasteça antes da próxima
-              missão.
+              Combustível do jato abaixo de 30%. Reabasteça antes da próxima missão.
             </Alert>
             <Alert open variant="danger" title="PERIGO MÁXIMO!">
-              Intruso detectado no perímetro. Acione o protocolo de segurança
-              imediatamente!
+              Intruso detectado no perímetro. Acione o protocolo de segurança imediatamente!
             </Alert>
             <Alert open variant="success" title="Missão cumprida!">
-              Todos os objetivos completados. Retorno seguro ao quartel.
-              Parabéns, herói!
+              Todos os objetivos completados. Retorno seguro ao quartel. Parabéns, herói!
             </Alert>
           </div>
         </section>
@@ -449,9 +401,7 @@ function App() {
               </div>
               <div className="app__bubble-wrap app__bubble-wrap--sm">
                 <SpeechBubble direction="left" bg="bg-[#0D0D0D]">
-                  <p className="app__bubble-text">
-                    Eu prefiro ação a palavras. Vamos lá!
-                  </p>
+                  <p className="app__bubble-text">Eu prefiro ação a palavras. Vamos lá!</p>
                 </SpeechBubble>
               </div>
             </div>
@@ -484,11 +434,7 @@ function App() {
               <div className="app__panel-footer">
                 <p className="app__panel-footer-text">
                   Estado atual:{" "}
-                  {[
-                    toggleA && "Herói",
-                    toggleB && "Poderes",
-                    toggleC && "Invisível",
-                  ]
+                  {[toggleA && "Herói", toggleB && "Poderes", toggleC && "Invisível"]
                     .filter(Boolean)
                     .join(", ") || "Nenhum ativo"}
                 </p>
@@ -496,15 +442,9 @@ function App() {
             </Card>
 
             <Card>
-              <p className="app__label app__label--panel">
-                Barras de Progresso
-              </p>
+              <p className="app__label app__label--panel">Barras de Progresso</p>
               <div className="app__stack-4">
-                <Progress
-                  value={power}
-                  variant="primary"
-                  label="Nível de Poder"
-                />
+                <Progress value={power} variant="primary" label="Nível de Poder" />
                 <Progress value={75} variant="success" label="Saúde" />
                 <Progress value={32} variant="danger" label="Energia" />
                 <Progress value={88} variant="secondary" label="Escudo" />
@@ -523,11 +463,7 @@ function App() {
                   >
                     + 10
                   </Button>
-                  <Button
-                    size="sm"
-                    variant="danger"
-                    onClick={() => setPower(0)}
-                  >
+                  <Button size="sm" variant="danger" onClick={() => setPower(0)}>
                     Reset
                   </Button>
                 </div>
@@ -601,18 +537,11 @@ function App() {
 
       {/* ── FOOTER ── */}
       <footer className="app__footer">
-        <Halftone
-          className="inset-0 w-full h-full"
-          color={YELLOW}
-          opacity={0.05}
-          size={14}
-        />
+        <Halftone className="inset-0 w-full h-full" color={YELLOW} opacity={0.05} size={14} />
         <div className="app__footer-inner">
           <div>
             <div className="app__footer-brand">INK UI</div>
-            <p className="app__footer-tagline">
-              Design system · Estilo Quadrinhos
-            </p>
+            <p className="app__footer-tagline">Design system · Estilo Quadrinhos</p>
           </div>
           <div className="app__footer-center">
             <p className="app__footer-credit">Feito com tinta e paixão</p>

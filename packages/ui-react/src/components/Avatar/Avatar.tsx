@@ -27,13 +27,7 @@ export interface IAvatarProps {
   status?: TAvatarStatus;
 }
 
-export function Avatar({
-  initials,
-  index = 0,
-  size = 48,
-  src,
-  status,
-}: IAvatarProps) {
+export function Avatar({ initials, index = 0, size = 48, src, status }: IAvatarProps) {
   const [imageFailed, setImageFailed] = useState(false);
   const showImage = Boolean(src) && !imageFailed;
   const bg = AV_COLOR_VARS[index % AV_COLOR_VARS.length];

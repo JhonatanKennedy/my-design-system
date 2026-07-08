@@ -17,21 +17,14 @@ export function SpeechBubble({
   const isLeft = direction === "left";
 
   return (
-    <div
-      className={`${styles.bubble} ${className}`}
-      style={{ backgroundColor: bg }}
-    >
+    <div className={`${styles.bubble} ${className}`} style={{ backgroundColor: bg }}>
       {children}
       {/* Rabicho */}
       <span
-        className={`${styles.tailOuter} ${
-          isLeft ? styles.tailOuterLeft : styles.tailOuterRight
-        }`}
+        className={`${styles.tailOuter} ${isLeft ? styles.tailOuterLeft : styles.tailOuterRight}`}
       />
       <span
-        className={`${styles.tailInner} ${
-          isLeft ? styles.tailInnerLeft : styles.tailInnerRight
-        }`}
+        className={`${styles.tailInner} ${isLeft ? styles.tailInnerLeft : styles.tailInnerRight}`}
       />
     </div>
   );

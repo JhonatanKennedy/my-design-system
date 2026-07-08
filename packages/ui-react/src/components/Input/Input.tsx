@@ -8,14 +8,7 @@ export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   helperText?: string;
 }
 
-export function Input({
-  label,
-  error,
-  helperText,
-  className = "",
-  id,
-  ...props
-}: IInputProps) {
+export function Input({ label, error, helperText, className = "", id, ...props }: IInputProps) {
   const generatedId = useId();
   const inputId = id ?? generatedId;
   const messageId = `${inputId}-message`;

@@ -33,7 +33,7 @@ export class CoreAlert extends LitElement {
       new CustomEvent("dismiss", {
         bubbles: true,
         composed: true,
-      }),
+      })
     );
   }
 
@@ -47,18 +47,20 @@ export class CoreAlert extends LitElement {
           ${this.title ? html`<p class="title">${this.title}</p>` : nothing}
           <p class="message"><slot></slot></p>
         </div>
-        ${this.dismissible
-          ? html`
-              <button
-                type="button"
-                class="dismiss"
-                @click="${this._handleDismiss}"
-                aria-label="Fechar"
-              >
-                ${unsafeSVG(X)}
-              </button>
-            `
-          : nothing}
+        ${
+          this.dismissible
+            ? html`
+                <button
+                  type="button"
+                  class="dismiss"
+                  @click="${this._handleDismiss}"
+                  aria-label="Fechar"
+                >
+                  ${unsafeSVG(X)}
+                </button>
+              `
+            : nothing
+        }
       </div>
     `;
   }

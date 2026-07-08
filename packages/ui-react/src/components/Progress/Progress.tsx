@@ -1,11 +1,6 @@
 import styles from "./Progress.module.scss";
 
-export type TProgressVariant =
-  | "primary"
-  | "secondary"
-  | "success"
-  | "danger"
-  | "info";
+export type TProgressVariant = "primary" | "secondary" | "success" | "danger" | "info";
 
 export interface IProgressProps {
   value?: number;

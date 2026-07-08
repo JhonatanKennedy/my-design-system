@@ -8,14 +8,7 @@ describe("Badge", () => {
     expect(screen.getByText("v1.0")).toBeInTheDocument();
   });
 
-  it.each([
-    "primary",
-    "secondary",
-    "danger",
-    "success",
-    "neutral",
-    "purple",
-  ] as const)(
+  it.each(["primary", "secondary", "danger", "success", "neutral", "purple"] as const)(
     "aplica uma classe de variant válida para variant=%s (evita regressão do bug variant -> classe inexistente)",
     (variant) => {
       render(<Badge variant={variant}>Texto</Badge>);
@@ -24,6 +17,6 @@ describe("Badge", () => {
       // se o componente apontar pra uma classe que não existe no .module.scss,
       // esse valor vem undefined e "undefined" aparece na className.
       expect(badge.className).not.toContain("undefined");
-    },
+    }
   );
 });

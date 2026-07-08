@@ -21,9 +21,7 @@ export function Card({
       className={`${styles.card} ${selected ? styles.selected : ""} ${className}`}
       style={{ transform: rotation ? `rotate(${rotation}deg)` : undefined }}
     >
-      {accent && (
-        <div className={styles.accent} style={{ background: accent }} />
-      )}
+      {accent && <div className={styles.accent} style={{ background: accent }} />}
       {children}
     </div>
   );

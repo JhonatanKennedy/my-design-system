@@ -1,10 +1,5 @@
 export type TCoreButtonVariant =
-  | "primary"
-  | "secondary"
-  | "danger"
-  | "success"
-  | "purple"
-  | "ghost";
+  "primary" | "secondary" | "danger" | "success" | "purple" | "ghost";
 
 export type TCoreButtonSize = "sm" | "md" | "lg";
 

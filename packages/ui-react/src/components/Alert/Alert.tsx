@@ -26,13 +26,7 @@ const VARIANT_CLASS: Record<TAlertVariant, string> = {
   warning: styles.warning,
 };
 
-export function Alert({
-  variant = "info",
-  title,
-  open,
-  children,
-  onDismiss,
-}: IAlertProps) {
+export function Alert({ variant = "info", title, open, children, onDismiss }: IAlertProps) {
   if (!open) return;
 
   return (
@@ -43,12 +37,7 @@ export function Alert({
         <p className={styles.message}>{children}</p>
       </div>
       {onDismiss && (
-        <button
-          type="button"
-          className={styles.dismiss}
-          onClick={onDismiss}
-          aria-label="Fechar"
-        >
+        <button type="button" className={styles.dismiss} onClick={onDismiss} aria-label="Fechar">
           <X size={16} />
         </button>
       )}

@@ -9,23 +9,14 @@ describe("Select", () => {
   it("renderiza todas as options", () => {
     render(<Select label="Tamanho" options={OPTIONS} />);
     OPTIONS.forEach((option) => {
-      expect(
-        screen.getByRole("option", { name: option }),
-      ).toBeInTheDocument();
+      expect(screen.getByRole("option", { name: option })).toBeInTheDocument();
     });
   });
 
   it("é controlável de fora via value/onChange", async () => {
     const onChange = vi.fn();
     const user = userEvent.setup();
-    render(
-      <Select
-        label="Tamanho"
-        options={OPTIONS}
-        value="Pequeno"
-        onChange={onChange}
-      />,
-    );
+    render(<Select label="Tamanho" options={OPTIONS} value="Pequeno" onChange={onChange} />);
 
     await user.selectOptions(screen.getByLabelText("Tamanho"), "Grande");
 
@@ -39,11 +30,7 @@ describe("Select", () => {
 
   it("mostra o helperText quando não há erro, e a mensagem de erro quando há", () => {
     const { rerender } = render(
-      <Select
-        label="Tamanho"
-        options={OPTIONS}
-        helperText="Escolha o tamanho ideal"
-      />,
+      <Select label="Tamanho" options={OPTIONS} helperText="Escolha o tamanho ideal" />
     );
     expect(screen.getByText("Escolha o tamanho ideal")).toBeInTheDocument();
 
@@ -53,11 +40,9 @@ describe("Select", () => {
         options={OPTIONS}
         helperText="Escolha o tamanho ideal"
         error="Campo obrigatório"
-      />,
+      />
     );
     expect(screen.getByText("Campo obrigatório")).toBeInTheDocument();
-    expect(
-      screen.queryByText("Escolha o tamanho ideal"),
-    ).not.toBeInTheDocument();
+    expect(screen.queryByText("Escolha o tamanho ideal")).not.toBeInTheDocument();
   });
 });

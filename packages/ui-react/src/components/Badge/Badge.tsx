@@ -1,13 +1,7 @@
 import type { ReactNode } from "react";
 import styles from "./Badge.module.scss";
 
-type BadgeVariant =
-  | "primary"
-  | "secondary"
-  | "danger"
-  | "success"
-  | "neutral"
-  | "purple";
+type BadgeVariant = "primary" | "secondary" | "danger" | "success" | "neutral" | "purple";
 
 export interface IBadgeProps {
   variant?: BadgeVariant;
@@ -25,8 +19,6 @@ const VARIANT_CLASS: Record<BadgeVariant, string> = {
 
 export function Badge({ variant = "primary", children }: IBadgeProps) {
   return (
-    <span className={`${styles["badge-container"]} ${VARIANT_CLASS[variant]}`}>
-      {children}
-    </span>
+    <span className={`${styles["badge-container"]} ${VARIANT_CLASS[variant]}`}>{children}</span>
   );
 }

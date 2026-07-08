@@ -6,7 +6,7 @@ import { Toggle } from "./Toggle";
 describe("Toggle", () => {
   it("reflete o estado checked via aria-checked", () => {
     const { rerender } = render(
-      <Toggle checked={false} onChange={() => {}} label="Notificações" />,
+      <Toggle checked={false} onChange={() => {}} label="Notificações" />
     );
     expect(screen.getByRole("switch")).toHaveAttribute("aria-checked", "false");
 
@@ -27,14 +27,7 @@ describe("Toggle", () => {
   it("não chama onChange quando disabled", async () => {
     const onChange = vi.fn();
     const user = userEvent.setup();
-    render(
-      <Toggle
-        checked={false}
-        onChange={onChange}
-        label="Notificações"
-        disabled
-      />,
-    );
+    render(<Toggle checked={false} onChange={onChange} label="Notificações" disabled />);
 
     await user.click(screen.getByRole("switch"));
 

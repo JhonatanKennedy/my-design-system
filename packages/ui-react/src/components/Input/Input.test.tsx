@@ -15,32 +15,19 @@ describe("Input", () => {
   });
 
   it("mostra a mensagem de erro no lugar do helperText quando error é string", () => {
-    render(
-      <Input
-        label="E-mail"
-        helperText="Usaremos só pra contato"
-        error="E-mail inválido"
-      />,
-    );
+    render(<Input label="E-mail" helperText="Usaremos só pra contato" error="E-mail inválido" />);
     expect(screen.getByText("E-mail inválido")).toBeInTheDocument();
-    expect(
-      screen.queryByText("Usaremos só pra contato"),
-    ).not.toBeInTheDocument();
+    expect(screen.queryByText("Usaremos só pra contato")).not.toBeInTheDocument();
   });
 
   it("marca aria-invalid quando error é apenas boolean, sem exigir mensagem", () => {
     render(<Input label="E-mail" error />);
-    expect(screen.getByLabelText("E-mail")).toHaveAttribute(
-      "aria-invalid",
-      "true",
-    );
+    expect(screen.getByLabelText("E-mail")).toHaveAttribute("aria-invalid", "true");
   });
 
   it("não marca aria-invalid quando não há erro", () => {
     render(<Input label="E-mail" />);
-    expect(screen.getByLabelText("E-mail")).not.toHaveAttribute(
-      "aria-invalid",
-    );
+    expect(screen.getByLabelText("E-mail")).not.toHaveAttribute("aria-invalid");
   });
 
   it("liga a mensagem de erro ao campo via aria-describedby", () => {
@@ -48,9 +35,7 @@ describe("Input", () => {
     const input = screen.getByLabelText("E-mail");
     const describedBy = input.getAttribute("aria-describedby");
     expect(describedBy).toBeTruthy();
-    expect(document.getElementById(describedBy!)).toHaveTextContent(
-      "E-mail inválido",
-    );
+    expect(document.getElementById(describedBy!)).toHaveTextContent("E-mail inválido");
   });
 
   it("respeita disabled e repassa eventos de digitação", async () => {
