@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+set -e
+
+echo "🔎 Running typecheck..."
+pnpm -r run typecheck
+
+echo "🧪 Running tests..."
+pnpm -r run test -- --run
