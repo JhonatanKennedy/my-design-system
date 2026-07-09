@@ -13,6 +13,7 @@ export default tseslint.config(
       "**/*.d.ts",
       //This ignores itself to prevent an error on ts analyzing it.
       "eslint.config.js",
+      "commitlint.config.js",
     ],
   },
 
@@ -49,8 +50,24 @@ export default tseslint.config(
         },
       ],
 
-      "no-console": "warn",
+      "@typescript-eslint/naming-convention": [
+        "error",
+        // Interfaces
+        {
+          selector: "interface",
+          format: ["PascalCase"],
+          prefix: ["I"],
+        },
 
+        // Type aliases
+        {
+          selector: "typeAlias",
+          format: ["PascalCase"],
+          prefix: ["T"],
+        },
+      ],
+
+      "no-console": "warn",
       "prefer-const": "error",
       "no-var": "error",
     },

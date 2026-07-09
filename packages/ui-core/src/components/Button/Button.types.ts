@@ -3,8 +3,8 @@ export type TCoreButtonVariant =
 
 export type TCoreButtonSize = "sm" | "md" | "lg";
 
-export interface ICoreButtonProps {
+export type TCoreButtonProps = {
   variant?: TCoreButtonVariant;
   size?: TCoreButtonSize;
   disabled?: boolean;
-}
+};
