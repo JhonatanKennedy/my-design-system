@@ -5,7 +5,6 @@ export * from "./Card";
 export * from "./Input";
 export * from "./Progress";
 export * from "./Toggle";
-export * from "./Halftone";
 export * from "./SectionTitle";
 export * from "./SpeechBubble";
 export * from "./Select";

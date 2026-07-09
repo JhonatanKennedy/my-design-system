@@ -9,7 +9,6 @@ import {
   Input,
   Progress,
   Toggle,
-  Halftone,
   SectionTitle,
   SpeechBubble,
   Tooltip,
@@ -67,8 +66,6 @@ function App() {
 
       {/* ── HERO ── */}
       <section className="app__hero">
-        <Halftone className="inset-0 w-full h-full" color="#FFFFFF" opacity={0.06} size={16} />
-        {/* diagonal stripe deco */}
         <div className="app__hero-stripes" />
 
         <div className="app__hero-grid">
@@ -543,7 +540,6 @@ function App() {
 
       {/* ── FOOTER ── */}
       <footer className="app__footer">
-        <Halftone className="inset-0 w-full h-full" color={YELLOW} opacity={0.05} size={14} />
         <div className="app__footer-inner">
           <div>
             <div className="app__footer-brand">INK UI</div>
