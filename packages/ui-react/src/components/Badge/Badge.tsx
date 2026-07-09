@@ -1,24 +1,11 @@
-import type { ReactNode } from "react";
-import styles from "./Badge.module.scss";
+import React from "react";
 
-type BadgeVariant = "primary" | "secondary" | "danger" | "success" | "neutral" | "purple";
+import { createComponent } from "@lit/react";
 
-export interface IBadgeProps {
-  variant?: BadgeVariant;
-  children: ReactNode;
-}
+import { CoreBadge as CoreBadgeElement } from "@my-design-system/ui-core";
 
-const VARIANT_CLASS: Record<BadgeVariant, string> = {
-  primary: styles.primary,
-  secondary: styles.secondary,
-  danger: styles.danger,
-  success: styles.success,
-  neutral: styles.neutral,
-  purple: styles.purple,
-};
-
-export function Badge({ variant = "primary", children }: IBadgeProps) {
-  return (
-    <span className={`${styles["badge-container"]} ${VARIANT_CLASS[variant]}`}>{children}</span>
-  );
-}
+export const Badge = createComponent({
+  react: React,
+  tagName: "core-badge",
+  elementClass: CoreBadgeElement,
+});

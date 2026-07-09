@@ -6,3 +6,4 @@ export type {
 
 export type { TAlertCoreVariant, TCoreAlertProps } from "./components/Alert/Alert.types";
 export type { TCoreAvatarStatus, TCoreAvatarProps } from "./components/Avatar/Avatar.types";
+export type { TCoreBadgeVariant, TBadgeProps } from "./components/Badge/Badge.types";
