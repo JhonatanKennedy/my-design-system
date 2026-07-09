@@ -318,9 +318,14 @@ function App() {
           <SectionTitle number="06" title="Formulários" />
           <Card>
             <div className="app__form-grid">
-              <Input label="Nome do herói" placeholder="Ex: Peter Parker" />
+              <Input label="Nome do herói" placeholder="Ex: Peter Parker" helperText="teste" />
               <Input label="Superpoder" placeholder="Ex: Aranha, força, velocidade" />
-              <Input label="Email" placeholder="heroi@universo.com" type="email" />
+              <Input
+                label="Email"
+                placeholder="heroi@universo.com"
+                type="email"
+                autocomplete="email"
+              />
               <Input label="Senha secreta" placeholder="••••••••" type="password" />
               <Select
                 label="Power Class"

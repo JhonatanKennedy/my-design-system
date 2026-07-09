@@ -8,3 +8,8 @@ export type { TAlertCoreVariant, TCoreAlertProps } from "./components/Alert/Aler
 export type { TCoreAvatarStatus, TCoreAvatarProps } from "./components/Avatar/Avatar.types";
 export type { TCoreBadgeVariant, TBadgeProps } from "./components/Badge/Badge.types";
 export type { TCardProps } from "./components/Card/Card.types";
+export type {
+  TCoreInputProps,
+  TCoreInputType,
+  TCoreInputAutocomplete,
+} from "./components/Input/Input.types";
