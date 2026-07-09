@@ -1,25 +1,14 @@
-import styles from "./Toggle.module.scss";
+import React from "react";
 
-export interface IToggleProps {
-  checked: boolean;
-  onChange: () => void;
-  label?: string;
-  disabled?: boolean;
-}
+import { createComponent } from "@lit/react";
 
-export function Toggle({ checked, onChange, label, disabled = false }: IToggleProps) {
-  return (
-    <div className={styles.wrapper}>
-      <button
-        onClick={onChange}
-        disabled={disabled}
-        role="switch"
-        aria-checked={checked}
-        className={`${styles.track} ${checked ? styles.trackOn : ""}`}
-      >
-        <span className={`${styles.thumb} ${checked ? styles.thumbOn : ""}`} />
-      </button>
-      {label && <span className={styles.label}>{label}</span>}
-    </div>
-  );
-}
+import { CoreToggle as CoreToggleElement } from "@my-design-system/ui-core";
+
+export const Toggle = createComponent({
+  react: React,
+  tagName: "core-toggle",
+  elementClass: CoreToggleElement,
+  events: {
+    onChange: "change",
+  },
+});

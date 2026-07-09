@@ -97,7 +97,7 @@ function App() {
               </SpeechBubble>
             </div>
             <div className="app__hero-bubble-2">
-              <SpeechBubble direction="right" bg="bg-[#FCD12A]">
+              <SpeechBubble direction="right" bg="#FCD12A">
                 <p className="app__bubble-text">100% customizável. Zero lorem ipsum.</p>
               </SpeechBubble>
             </div>
@@ -395,7 +395,7 @@ function App() {
                 V
               </div>
               <div className="app__bubble-wrap app__bubble-wrap--rotate-pos">
-                <SpeechBubble direction="right" bg="bg-[#FCD12A]">
+                <SpeechBubble direction="right" bg="#FCD12A">
                   <p className="app__bubble-text">
                     Isso é o que eles todos dizem... antes de perder para mim!
                   </p>
@@ -408,7 +408,7 @@ function App() {
                 A
               </div>
               <div className="app__bubble-wrap app__bubble-wrap--sm">
-                <SpeechBubble direction="left" bg="bg-[#0D0D0D]">
+                <SpeechBubble direction="left">
                   <p className="app__bubble-text">Eu prefiro ação a palavras. Vamos lá!</p>
                 </SpeechBubble>
               </div>

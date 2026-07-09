@@ -17,6 +17,7 @@
   height: 50px;
   border: 3px solid var(--ds-border);
   background-color: var(--ds-input-background);
+  color: var(--ds-foreground);
   padding: 0 2.5rem 0 1rem;
   font-weight: 500;
   font-family: "Comic Neue", sans-serif;
@@ -29,34 +30,34 @@
   background-position: right 12px center;
   cursor: pointer;
   width: 100%;
-
-  &:focus {
-    outline: none;
-    box-shadow: 4px 4px 0px var(--ds-border);
-    transform: translate(-1px, -1px);
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    background-color: var(--ds-muted);
-  }
 }
 
-.selectError {
+.select:focus {
+  outline: none;
+  box-shadow: 4px 4px 0px var(--ds-border);
+  transform: translate(-1px, -1px);
+}
+
+.select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--ds-muted);
+}
+
+.select-error {
   border-color: var(--ds-accent);
-
-  &:focus {
-    box-shadow: 4px 4px 0px var(--ds-accent);
-  }
 }
 
-.helperText {
+.select-error:focus {
+  box-shadow: 4px 4px 0px var(--ds-accent);
+}
+
+.helper-text {
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--ds-muted-foreground);
 }
 
-.errorMessage {
+.error-message {
   color: var(--ds-accent);
 }

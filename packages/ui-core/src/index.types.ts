@@ -13,3 +13,15 @@ export type {
   TCoreInputType,
   TCoreInputAutocomplete,
 } from "./components/Input/Input.types";
+export type {
+  TCoreSpeechBubbleDirection,
+  TCoreSpeechBubbleProps,
+} from "./components/SpeechBubble/SpeechBubble.types";
+export type { TCoreTooltipProps } from "./components/Tooltip/Tooltip.types";
+export type { TCoreToggleProps } from "./components/Toggle/Toggle.types";
+export type { TCoreSelectProps } from "./components/Select/Select.types";
+export type { TCoreSectionTitleProps } from "./components/SectionTitle/SectionTitle.types";
+export type {
+  TCoreProgressVariant,
+  TCoreProgressProps,
+} from "./components/Progress/Progress.types";

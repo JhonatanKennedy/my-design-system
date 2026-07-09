@@ -1,18 +1,11 @@
-import { useState } from "react";
-import type { ReactNode } from "react";
-import styles from "./Tooltip.module.scss";
+import React from "react";
 
-export function Tooltip({ children, tip }: { children: ReactNode; tip: string }) {
-  const [vis, setVis] = useState(false);
+import { createComponent } from "@lit/react";
 
-  return (
-    <span
-      className={styles.wrapper}
-      onMouseEnter={() => setVis(true)}
-      onMouseLeave={() => setVis(false)}
-    >
-      {children}
-      {vis && <span className={styles.bubble}>{tip}</span>}
-    </span>
-  );
-}
+import { CoreTooltip as CoreTooltipElement } from "@my-design-system/ui-core";
+
+export const Tooltip = createComponent({
+  react: React,
+  tagName: "core-tooltip",
+  elementClass: CoreTooltipElement,
+});

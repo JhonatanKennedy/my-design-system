@@ -1,31 +1,11 @@
-import type { ReactNode } from "react";
-import styles from "./SpeechBubble.module.scss";
+import React from "react";
 
-export interface ISpeechBubbleProps {
-  children: ReactNode;
-  direction?: "left" | "right";
-  bg?: string;
-  className?: string;
-}
+import { createComponent } from "@lit/react";
 
-export function SpeechBubble({
-  children,
-  direction = "left",
-  bg = "#ffffff",
-  className = "",
-}: ISpeechBubbleProps) {
-  const isLeft = direction === "left";
+import { CoreSpeechBubble as CoreSpeechBubbleElement } from "@my-design-system/ui-core";
 
-  return (
-    <div className={`${styles.bubble} ${className}`} style={{ backgroundColor: bg }}>
-      {children}
-      {/* Rabicho */}
-      <span
-        className={`${styles.tailOuter} ${isLeft ? styles.tailOuterLeft : styles.tailOuterRight}`}
-      />
-      <span
-        className={`${styles.tailInner} ${isLeft ? styles.tailInnerLeft : styles.tailInnerRight}`}
-      />
-    </div>
-  );
-}
+export const SpeechBubble = createComponent({
+  react: React,
+  tagName: "core-speech-bubble",
+  elementClass: CoreSpeechBubbleElement,
+});

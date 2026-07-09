@@ -13,6 +13,7 @@
   background-color: var(--ds-card);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .fill {

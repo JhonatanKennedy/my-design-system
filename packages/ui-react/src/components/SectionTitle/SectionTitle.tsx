@@ -1,16 +1,11 @@
-import styles from "./SectionTitle.module.scss";
+import React from "react";
 
-export interface ISectionTitle {
-  number: string;
-  title: string;
-}
+import { createComponent } from "@lit/react";
 
-export function SectionTitle({ number, title }: ISectionTitle) {
-  return (
-    <div className={styles.title}>
-      <span className={styles.number}>{number}</span>
-      <h2 className={styles.heading}>{title}</h2>
-      <div className={styles.line} />
-    </div>
-  );
-}
+import { CoreSectionTitle as CoreSectionTitleElement } from "@my-design-system/ui-core";
+
+export const SectionTitle = createComponent({
+  react: React,
+  tagName: "core-section-title",
+  elementClass: CoreSectionTitleElement,
+});
