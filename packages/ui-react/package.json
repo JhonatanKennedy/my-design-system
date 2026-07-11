@@ -15,7 +15,7 @@
         "types": "./dist/index.d.ts",
         "import": "./dist/index.js"
       },
-      "./styles": "./dist/styles/base.css"
+      "./styles/reset": "./dist/styles/reset.css"
     }
   },
   "exports": {
@@ -23,7 +23,7 @@
     "./styles/reset": "./src/styles.ts"
   },
   "sideEffects": [
-    "./dist/styles/base.css"
+    "./src/styles.ts"
   ],
   "scripts": {
     "dev": "vite",
