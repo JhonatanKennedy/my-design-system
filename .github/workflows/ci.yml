@@ -6,9 +6,12 @@ on:
     branches:
       - master
 
+env:
+  TURBO_TELEMETRY_DISABLED: 1
+
 jobs:
   ci:
-    name: Lint • Typecheck • Test
+    name: Lint • Typecheck • Test • Build
     runs-on: ubuntu-latest
 
     steps:
@@ -33,10 +36,20 @@ jobs:
         run: pnpm exec prettier . --check
 
       - name: Lint
-        run: pnpm -r run lint
+        run: pnpm lint
 
       - name: Typecheck
-        run: pnpm -r run typecheck
+        run: pnpm typecheck
 
-      - name: Run tests
-        run: pnpm -r run test -- --run
+      - name: Test
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build
+
+      - name: Upload playground artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: playground-dist
+          path: apps/playground-react/dist
+          if-no-files-found: error

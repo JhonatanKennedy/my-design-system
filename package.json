@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier . --write",
-    "format:check": "prettier . --check",
-    "check": "pnpm format:check && pnpm lint && pnpm -r typecheck && pnpm -r test -- --run",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish",
     "commit": "git cz"
   },
   "keywords": [],
@@ -25,6 +26,7 @@
   },
   "type": "module",
   "devDependencies": {
+    "@changesets/cli": "^2.31.0",
     "@commitlint/cli": "^21.2.1",
     "@commitlint/config-conventional": "^21.2.0",
     "@eslint/js": "^10.0.1",
@@ -35,15 +37,9 @@
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
     "prettier": "^3.9.4",
+    "tsdown": "^0.22.4",
+    "turbo": "^2.10.4",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.62.1"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "pnpm exec eslint --fix"
-    ],
-    "*": [
-      "pnpm exec prettier --write --ignore-unknown"
-    ]
   }
 }
