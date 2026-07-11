@@ -15,7 +15,7 @@
         "types": "./dist/index.d.ts",
         "import": "./dist/index.js"
       },
-      "./styles/reset": "./dist/styles/reset.css"
+      "./styles/reset": "./dist/styles/base.css"
     }
   },
   "exports": {
@@ -23,11 +23,13 @@
     "./styles/reset": "./src/styles.ts"
   },
   "sideEffects": [
+    "./dist/styles/base.css",
     "./src/styles.ts"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && pnpm build:styles",
+    "build:styles": "mkdir -p dist/styles && cp ../ui-core/dist/styles/reset.css dist/styles/base.css",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
