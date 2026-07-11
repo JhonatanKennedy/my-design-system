@@ -1,5 +1,0 @@
-@mixin emit-theme($theme, $prefix: "") {
-  @each $key, $value in $theme {
-    --#{$prefix}#{$key}: #{$value};
-  }
-}
