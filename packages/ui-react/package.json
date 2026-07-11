@@ -3,10 +3,28 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "./styles": "./dist/styles/base.css"
+    }
+  },
   "exports": {
     ".": "./src/index.ts",
-    "./styles/base.scss": "./src/styles/base.scss"
+    "./styles/reset": "./src/styles.ts"
   },
+  "sideEffects": [
+    "./dist/styles/base.css"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
