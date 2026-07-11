@@ -1,5 +1,5 @@
 {
-  "name": "@my-design-system/playground-react",
+  "name": "@jhonatankennedy/playground-react",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@my-design-system/ui-react": "workspace:*",
+    "@jhonatankennedy/playground-react": "link:",
+    "@jhonatankennedy/ui-react": "workspace:*",
     "lucide-react": "0.487.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"

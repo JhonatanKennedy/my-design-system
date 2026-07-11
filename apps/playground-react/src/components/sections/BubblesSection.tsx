@@ -1,4 +1,4 @@
-import { SectionTitle, SpeechBubble } from "@my-design-system/ui-react";
+import { SectionTitle, SpeechBubble } from "@jhonatankennedy/ui-react";
 import { BLUE, GREEN, RED } from "../../constants/colors";
 
 export function BubblesSection() {

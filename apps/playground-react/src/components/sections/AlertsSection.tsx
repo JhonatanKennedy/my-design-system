@@ -1,4 +1,4 @@
-import { Alert, SectionTitle } from "@my-design-system/ui-react";
+import { Alert, SectionTitle } from "@jhonatankennedy/ui-react";
 
 export function AlertsSection() {
   return (

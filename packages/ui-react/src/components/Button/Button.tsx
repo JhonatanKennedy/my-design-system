@@ -2,7 +2,7 @@ import React from "react";
 
 import { createComponent } from "@lit/react";
 
-import { CoreButton as CoreButtonElement } from "@my-design-system/ui-core";
+import { CoreButton as CoreButtonElement } from "@jhonatankennedy/ui-core";
 
 export const Button = createComponent({
   react: React,

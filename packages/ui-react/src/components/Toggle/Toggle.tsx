@@ -2,7 +2,7 @@ import React from "react";
 
 import { createComponent } from "@lit/react";
 
-import { CoreToggle as CoreToggleElement } from "@my-design-system/ui-core";
+import { CoreToggle as CoreToggleElement } from "@jhonatankennedy/ui-core";
 
 export const Toggle = createComponent({
   react: React,

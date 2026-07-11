@@ -2,7 +2,7 @@ import React from "react";
 
 import { createComponent } from "@lit/react";
 
-import { CoreInput as CoreInputElement } from "@my-design-system/ui-core";
+import { CoreInput as CoreInputElement } from "@jhonatankennedy/ui-core";
 
 export const Input = createComponent({
   react: React,

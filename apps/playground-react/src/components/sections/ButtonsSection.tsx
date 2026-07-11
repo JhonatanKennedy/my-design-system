@@ -1,5 +1,5 @@
 import { Check, Sparkles, Star, X, Zap } from "lucide-react";
-import { Button, Card, SectionTitle } from "@my-design-system/ui-react";
+import { Button, Card, SectionTitle } from "@jhonatankennedy/ui-react";
 
 export function ButtonsSection() {
   return (

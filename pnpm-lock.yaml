@@ -308,7 +308,10 @@ importers:
 
   apps/playground-react:
     dependencies:
-      "@my-design-system/ui-react":
+      "@jhonatankennedy/playground-react":
+        specifier: "link:"
+        version: "link:"
+      "@jhonatankennedy/ui-react":
         specifier: workspace:*
         version: link:../../packages/ui-react
       lucide-react:
@@ -391,12 +394,12 @@ importers:
 
   packages/ui-react:
     dependencies:
+      "@jhonatankennedy/ui-core":
+        specifier: workspace:*
+        version: link:../ui-core
       "@lit/react":
         specifier: ^1.0.8
         version: 1.0.8(@types/react@19.2.17)
-      "@my-design-system/ui-core":
-        specifier: workspace:*
-        version: link:../ui-core
       lucide-react:
         specifier: 0.487.0
         version: 0.487.0(react@19.2.7)

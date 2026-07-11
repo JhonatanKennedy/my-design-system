@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
-import { Badge, Toggle, useTheme } from "@my-design-system/ui-react";
+import { Badge, Toggle, useTheme } from "@jhonatankennedy/ui-react";
 
 const NAV_ITEMS = ["Componentes", "Tokens", "Docs", "GitHub"];
 

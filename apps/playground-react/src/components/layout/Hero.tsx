@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { Button, SpeechBubble } from "@my-design-system/ui-react";
+import { Button, SpeechBubble } from "@jhonatankennedy/ui-react";
 
 export function Hero() {
   return (

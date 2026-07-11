@@ -2,7 +2,7 @@ import React from "react";
 
 import { createComponent } from "@lit/react";
 
-import { CoreAvatar as CoreAvatarElement } from "@my-design-system/ui-core";
+import { CoreAvatar as CoreAvatarElement } from "@jhonatankennedy/ui-core";
 
 export const Avatar = createComponent({
   react: React,

@@ -1,4 +1,4 @@
-# @my-design-system/ui-react
+# @jhonatankennedy/ui-react
 
 ## 0.1.0
 
@@ -9,4 +9,4 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @my-design-system/ui-core@0.1.0
+  - @jhonatankennedy/ui-core@0.1.0

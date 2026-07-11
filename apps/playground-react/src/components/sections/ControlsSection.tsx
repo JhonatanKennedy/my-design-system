@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Card, Progress, SectionTitle, Toggle } from "@my-design-system/ui-react";
+import { Button, Card, Progress, SectionTitle, Toggle } from "@jhonatankennedy/ui-react";
 
 export function ControlsSection() {
   const [toggleA, setToggleA] = useState(false);

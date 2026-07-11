@@ -1,4 +1,4 @@
-import { Card, SectionTitle } from "@my-design-system/ui-react";
+import { Card, SectionTitle } from "@jhonatankennedy/ui-react";
 
 export function TypographySection() {
   return (

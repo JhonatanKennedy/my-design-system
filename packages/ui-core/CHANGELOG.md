@@ -1,4 +1,4 @@
-# @my-design-system/ui-core
+# @jhonatankennedy/ui-core
 
 ## 0.1.0
 

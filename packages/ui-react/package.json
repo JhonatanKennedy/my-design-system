@@ -1,5 +1,5 @@
 {
-  "name": "@my-design-system/ui-react",
+  "name": "@jhonatankennedy/ui-react",
   "private": false,
   "version": "0.1.0",
   "type": "module",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@lit/react": "^1.0.8",
-    "@my-design-system/ui-core": "workspace:*",
+    "@jhonatankennedy/ui-core": "workspace:*",
     "lucide-react": "0.487.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"

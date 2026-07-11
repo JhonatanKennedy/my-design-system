@@ -1,5 +1,5 @@
 import { Check, Heart } from "lucide-react";
-import { Badge, Button, Card, Progress, SectionTitle } from "@my-design-system/ui-react";
+import { Badge, Button, Card, Progress, SectionTitle } from "@jhonatankennedy/ui-react";
 import { BLUE, GREEN, YELLOW } from "../../constants/colors";
 
 export function CardsSection() {

@@ -2,7 +2,7 @@ import React from "react";
 
 import { createComponent } from "@lit/react";
 
-import { CoreAlert as CoreAlertElement } from "@my-design-system/ui-core";
+import { CoreAlert as CoreAlertElement } from "@jhonatankennedy/ui-core";
 
 export const Alert = createComponent({
   react: React,

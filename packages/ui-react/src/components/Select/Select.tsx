@@ -2,7 +2,7 @@ import React from "react";
 
 import { createComponent } from "@lit/react";
 
-import { CoreSelect as CoreSelectTitleElement } from "@my-design-system/ui-core";
+import { CoreSelect as CoreSelectTitleElement } from "@jhonatankennedy/ui-core";
 
 export const Select = createComponent({
   react: React,

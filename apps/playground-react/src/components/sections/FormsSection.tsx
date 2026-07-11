@@ -1,5 +1,5 @@
 import { Shield } from "lucide-react";
-import { Button, Card, Input, SectionTitle, Select } from "@my-design-system/ui-react";
+import { Button, Card, Input, SectionTitle, Select } from "@jhonatankennedy/ui-react";
 
 const POWER_CLASS_OPTIONS = [
   "S-Class — Universe Level",

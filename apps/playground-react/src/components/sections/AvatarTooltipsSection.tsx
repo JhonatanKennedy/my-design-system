@@ -1,4 +1,4 @@
-import { Avatar, Card, SectionTitle, Tooltip } from "@my-design-system/ui-react";
+import { Avatar, Card, SectionTitle, Tooltip } from "@jhonatankennedy/ui-react";
 
 const AVATARS = [
   { in: "SM", name: "Spider-Man", i: 0 },

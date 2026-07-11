@@ -1,4 +1,4 @@
-import { Badge, SectionTitle } from "@my-design-system/ui-react";
+import { Badge, SectionTitle } from "@jhonatankennedy/ui-react";
 import { BLUE, GREEN, INK, RED, YELLOW } from "../../constants/colors";
 
 const COLORS = [

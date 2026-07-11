@@ -1,4 +1,4 @@
-import { Badge, Card, SectionTitle } from "@my-design-system/ui-react";
+import { Badge, Card, SectionTitle } from "@jhonatankennedy/ui-react";
 
 export function BadgesSection() {
   return (

@@ -1,8 +1,8 @@
-# @my-design-system/playground-react
+# @jhonatankennedy/playground-react
 
 ## 0.0.1
 
 ### Patch Changes
 
 - Updated dependencies
-  - @my-design-system/ui-react@0.1.0
+  - @jhonatankennedy/ui-react@0.1.0

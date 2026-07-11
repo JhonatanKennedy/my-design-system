@@ -1,1 +1,1 @@
-import "@my-design-system/ui-core/styles/reset";
+import "@jhonatankennedy/ui-core/styles/reset";
