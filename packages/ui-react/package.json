@@ -21,11 +21,14 @@
   },
   "exports": {
     ".": "./src/index.ts",
-    "./styles/reset": "./src/styles.ts"
+    "./styles.css": "./src/tokens.ts",
+    "./styles/reset.css": "./src/styles.ts"
   },
   "sideEffects": [
     "./dist/styles/reset.css",
-    "./dist/styles.css"
+    "./dist/index.css",
+    "./src/styles.ts",
+    "./src/tokens.ts"
   ],
   "scripts": {
     "dev": "vite",

@@ -1,1 +1,1 @@
-import "@jhonatankennedy/ui-core/styles/reset";
+import "@jhonatankennedy/ui-core/styles/reset.css";
