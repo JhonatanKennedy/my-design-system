@@ -12,6 +12,8 @@ import { AlertsSection } from "./components/sections/AlertsSection";
 import { BubblesSection } from "./components/sections/BubblesSection";
 import { ControlsSection } from "./components/sections/ControlsSection";
 import { AvatarTooltipsSection } from "./components/sections/AvatarTooltipsSection";
+import { TabsSection } from "./components/sections/TabsSection";
+import { TableSection } from "./components/sections/TableSection";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <BubblesSection />
         <ControlsSection />
         <AvatarTooltipsSection />
+        <TabsSection />
+        <TableSection />
       </div>
 
       <Footer />

@@ -649,3 +649,110 @@ $bp-md: 768px;
     color: #fff;
   }
 }
+
+// ---------------------------------------------------------------------------
+// Hero table (TableSection)
+// ---------------------------------------------------------------------------
+
+.app__hero-table-wrap {
+  @include comic-border;
+  @include comic-shadow;
+  overflow: hidden;
+}
+
+.app__hero-table-scroll {
+  overflow-x: auto;
+}
+
+.app__hero-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+}
+
+.app__hero-table-th {
+  font-family: "Bangers", cursive;
+  letter-spacing: 0.12em;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  background: var(--ds-border);
+  color: var(--ds-primary);
+  border-right: 3px solid var(--ds-primary);
+  white-space: nowrap;
+  text-align: left;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.app__hero-table-th--sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background 120ms ease;
+}
+
+.app__hero-table-th--active {
+  background: var(--ds-primary);
+  color: var(--ds-primary-foreground, #fff);
+}
+
+.app__hero-table-th--center {
+  text-align: center;
+}
+
+.app__hero-table-row {
+  border-bottom: 2.5px solid var(--ds-border);
+  transition: background 100ms ease;
+
+  &:nth-child(even) {
+    background: var(--ds-muted);
+  }
+
+  &:hover {
+    background: color-mix(in srgb, var(--ds-primary) 12%, transparent);
+  }
+}
+
+.app__hero-table-td {
+  padding: 10px 14px;
+  border-right: 2px solid var(--ds-border);
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-size: 0.85rem;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.app__hero-table-td--center {
+  text-align: center;
+}
+
+.app__hero-table-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app__hero-table-name {
+  font-family: "Bangers", cursive;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+}
+
+.app__hero-table-alias {
+  color: var(--ds-muted-foreground);
+}
+
+.app__hero-table-footer {
+  background: var(--ds-border);
+  padding: 6px 14px;
+  font-family: "Comic Neue", cursive;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ds-primary);
+  border-top: 3px solid var(--ds-border);
+}

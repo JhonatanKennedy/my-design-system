@@ -5,8 +5,10 @@ export { CoreAlert } from "./components/Alert";
 export { CoreAvatar } from "./components/Avatar";
 export { CoreBadge } from "./components/Badge";
 export { CoreCard } from "./components/Card";
+export { CoreCheckbox } from "./components/Checkbox";
 export { CoreInput } from "./components/Input";
 export { CoreSpeechBubble } from "./components/SpeechBubble";
+export { CoreTabs } from "./components/Tabs";
 export { CoreTooltip } from "./components/Tooltip";
 export { CoreToggle } from "./components/Toggle";
 export { CoreSelect } from "./components/Select";
@@ -24,6 +26,8 @@ export type { TAlertCoreVariant, TCoreAlertProps } from "./components/Alert/Aler
 export type { TCoreAvatarStatus, TCoreAvatarProps } from "./components/Avatar/Avatar.types";
 export type { TCoreBadgeVariant, TBadgeProps } from "./components/Badge/Badge.types";
 export type { TCardProps } from "./components/Card/Card.types";
+export type { TCoreCheckboxProps } from "./components/Checkbox/Checkbox.types";
+export type { TCoreTabsProps } from "./components/Tabs/Tabs.types";
 export type {
   TCoreInputProps,
   TCoreInputType,

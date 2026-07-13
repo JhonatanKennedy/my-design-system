@@ -1,0 +1,36 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  font-family: "Bangers", cursive;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 1rem;
+  transition: all 150ms ease;
+  cursor: pointer;
+  background: var(--ds-card);
+  color: var(--ds-foreground);
+  border: 3px solid var(--ds-border);
+  position: relative;
+}
+
+.tab-active {
+  background: var(--ds-primary);
+  color: var(--ds-primary-foreground, #fff);
+  border-bottom: 3px solid var(--ds-primary);
+  margin-bottom: -3px;
+  z-index: 1;
+}
+
+.panel {
+  padding: 1.25rem;
+  background: var(--ds-card);
+  border: 3px solid var(--ds-border);
+  box-shadow: 4px 4px 0 var(--ds-border);
+}
