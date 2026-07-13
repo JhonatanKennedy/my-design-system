@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-react
 
+## 0.2.1
+
+### Patch Changes
+
+- try to fix the exports css files
+
 ## 0.2.0
 
 ### Minor Changes

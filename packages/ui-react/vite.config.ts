@@ -14,7 +14,7 @@ export default defineConfig({
     },
 
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ["react", "@lit/react", "lit"],
     },
   },
 
