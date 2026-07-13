@@ -58,7 +58,11 @@ export function HeroTable() {
           </thead>
           <tbody>
             {sortedHeroes.map((hero) => (
-              <HeroTableRow key={hero.name} hero={hero} avatarIndex={HERO_AVATAR_INDEX[hero.name]} />
+              <HeroTableRow
+                key={hero.name}
+                hero={hero}
+                avatarIndex={HERO_AVATAR_INDEX[hero.name]}
+              />
             ))}
           </tbody>
         </table>

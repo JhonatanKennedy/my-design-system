@@ -14,8 +14,8 @@ const TABS = [
     label: "Poderes",
     content: (
       <p className="app__panel-footer-text">
-        Força e agilidade sobre-humanas, sentido aranha para prever perigo e lançadores de teia
-        para se locomover pela cidade.
+        Força e agilidade sobre-humanas, sentido aranha para prever perigo e lançadores de teia para
+        se locomover pela cidade.
       </p>
     ),
   },
