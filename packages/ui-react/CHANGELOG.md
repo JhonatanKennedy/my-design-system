@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-react
 
+## 0.2.2
+
+### Patch Changes
+
+- 16843a3: try to export components correctly
+
 ## 0.2.1
 
 ### Patch Changes
