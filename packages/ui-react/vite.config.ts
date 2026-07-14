@@ -21,7 +21,7 @@ export default defineConfig({
     },
 
     rollupOptions: {
-      external: ["react", "@lit/react", "lit", "lucide-react"],
+      external: ["react", "@lit/react", "lit", "lucide-react", "react/jsx-dev-runtime"],
     },
   },
 
