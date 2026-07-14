@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-react
 
+## 0.2.4
+
+### Patch Changes
+
+- 908e412: add "react/jsx-runtime" to externals on ui-react
+
 ## 0.2.3
 
 ### Patch Changes
