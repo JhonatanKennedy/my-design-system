@@ -16,7 +16,7 @@
         "import": "./dist/index.js"
       },
       "./styles.css": "./dist/index.css",
-      "./styles/reset.css": "./dist/styles/reset.css"
+      "./styles/reset.css": "./dist/index.css"
     }
   },
   "exports": {
