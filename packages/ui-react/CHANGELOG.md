@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-react
 
+## 0.2.5
+
+### Patch Changes
+
+- 2f9fd97: Css now will work
+
 ## 0.2.4
 
 ### Patch Changes
