@@ -1,5 +1,14 @@
 # @jhonatankennedy/ui-react
 
+## 0.2.3
+
+### Patch Changes
+
+- fbb9213: fix import css
+- b2dac3a: try to fix imports
+- Updated dependencies [fbb9213]
+  - @jhonatankennedy/ui-core@0.2.1
+
 ## 0.2.2
 
 ### Patch Changes
