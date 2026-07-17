@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-react
 
+## 0.2.6
+
+### Patch Changes
+
+- 393be9f: add types
+
 ## 0.2.5
 
 ### Patch Changes
