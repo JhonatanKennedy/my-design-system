@@ -20,7 +20,7 @@
 }
 
 .danger {
-  background-color: var(--ds-accent);
+  background-color: var(--ds-destructive);
   color: #ffffff;
 }
 
@@ -34,7 +34,7 @@
   color: var(--ds-primary);
 }
 
-.purple {
+.info {
   background-color: var(--ds-info);
   color: #ffffff;
 }

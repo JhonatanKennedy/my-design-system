@@ -13,7 +13,7 @@ export function BadgesSection() {
               <Badge variant="secondary">Info</Badge>
               <Badge variant="danger">Crítico</Badge>
               <Badge variant="success">Sucesso</Badge>
-              <Badge variant="purple">Beta</Badge>
+              <Badge variant="info">Beta</Badge>
               <Badge variant="neutral">Neutro</Badge>
             </div>
           </div>

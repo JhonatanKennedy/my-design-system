@@ -1,5 +1,4 @@
-export type TCoreButtonVariant =
-  "primary" | "secondary" | "danger" | "success" | "purple" | "ghost";
+export type TCoreButtonVariant = "primary" | "secondary" | "danger" | "success" | "info" | "ghost";
 
 export type TCoreButtonSize = "sm" | "md" | "lg";
 

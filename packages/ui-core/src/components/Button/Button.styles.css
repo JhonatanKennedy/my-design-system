@@ -41,7 +41,7 @@
 }
 
 .danger {
-  background-color: var(--ds-accent);
+  background-color: var(--ds-destructive);
   color: #fff;
   box-shadow: 4px 4px 0px var(--ds-border);
 }
@@ -60,12 +60,12 @@
   transform: translate(2px, 2px);
 }
 
-.purple {
+.info {
   background-color: var(--ds-info);
   color: #fff;
   box-shadow: 4px 4px 0px var(--ds-border);
 }
-.purple:active {
+.info:active {
   box-shadow: 2px 2px 0px var(--ds-border);
   transform: translate(2px, 2px);
 }

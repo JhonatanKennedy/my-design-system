@@ -45,8 +45,8 @@
 }
 
 .info {
-  background-color: var(--ds-secondary);
-  color: var(--ds-secondary-foreground);
+  background-color: var(--ds-info);
+  color: var(--ds-info-foreground);
 }
 
 .warning {

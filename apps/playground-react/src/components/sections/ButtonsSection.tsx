@@ -14,7 +14,7 @@ export function ButtonsSection() {
               <Button variant="secondary">Secundário</Button>
               <Button variant="danger">Perigo</Button>
               <Button variant="success">Sucesso</Button>
-              <Button variant="purple">Roxo</Button>
+              <Button variant="info">Info</Button>
               <Button variant="ghost">Ghost</Button>
             </div>
           </div>

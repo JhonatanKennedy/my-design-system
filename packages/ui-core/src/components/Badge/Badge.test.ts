@@ -26,7 +26,7 @@ describe("core-badge", () => {
     expect(badge.classList.contains("success")).toBe(true);
   });
 
-  it.each(["primary", "secondary", "danger", "success", "neutral", "purple"] as const)(
+  it.each(["primary", "secondary", "danger", "success", "neutral", "info"] as const)(
     "Badge should apply the '%s' variant",
     async (variant) => {
       el.variant = variant;
