@@ -2,6 +2,33 @@
   "name": "@jhonatankennedy/playground-next",
   "version": "0.1.0",
   "private": true,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "./styles.css": "./dist/index.css",
+      "./styles/reset.css": "./dist/index.css"
+    }
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./styles.css": "./src/tokens.ts",
+    "./styles/reset.css": "./src/styles.ts"
+  },
+  "sideEffects": [
+    "./dist/styles/reset.css",
+    "./dist/index.css",
+    "./src/styles.ts",
+    "./src/tokens.ts"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

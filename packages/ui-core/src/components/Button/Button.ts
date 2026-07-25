@@ -8,14 +8,20 @@ export class CoreButton extends LitElement {
   static styles = buttonStyles;
 
   @property({ reflect: true })
-  variant: TCoreButtonVariant = "primary";
+  declare variant: TCoreButtonVariant;
 
   @property({ reflect: true })
-  size: TCoreButtonSize = "md";
+  declare size: TCoreButtonSize;
 
   @property({ type: Boolean, reflect: true })
-  disabled = false;
+  declare disabled: boolean;
 
+  constructor() {
+    super();
+    this.variant = "primary";
+    this.size = "md";
+    this.disabled = false;
+  }
   render() {
     return html`<button class="button ${this.variant} ${this.size}" ?disabled="${this.disabled}">
       <slot></slot>

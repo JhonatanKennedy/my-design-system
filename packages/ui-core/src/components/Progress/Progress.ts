@@ -16,17 +16,23 @@ export class CoreProgress extends LitElement {
   static styles = progressStyles;
 
   @property({ type: Number })
-  value = 0;
+  declare value: number;
 
   @property({ type: String, reflect: true })
-  variant: TCoreProgressVariant = "primary";
+  declare variant: TCoreProgressVariant;
 
   @property({ type: Boolean, reflect: true })
-  indeterminate = false;
+  declare indeterminate: boolean;
 
   @property({ type: String })
-  label?: string;
+  declare label: string | undefined;
 
+  constructor() {
+    super();
+    this.value = 0;
+    this.variant = "primary";
+    this.indeterminate = false;
+  }
   render() {
     const width = this.indeterminate ? "40%" : `${this.value}%`;
     const color = VARIANT_COLOR[this.variant];

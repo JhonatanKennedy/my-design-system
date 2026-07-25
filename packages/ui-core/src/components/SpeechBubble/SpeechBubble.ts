@@ -8,11 +8,16 @@ export class CoreSpeechBubble extends LitElement {
   static styles = speechBubbleStyles;
 
   @property({ type: String, reflect: true })
-  direction: TCoreSpeechBubbleDirection = "left";
+  declare direction: TCoreSpeechBubbleDirection;
 
   @property({ type: String })
-  bg = "#ffffff";
+  declare bg: string;
 
+  constructor() {
+    super();
+    this.direction = "left";
+    this.bg = "#ffffff";
+  }
   render() {
     const isLeft = this.direction === "left";
 

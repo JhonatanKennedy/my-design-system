@@ -7,11 +7,16 @@ export class CoreSectionTitle extends LitElement {
   static styles = sectionTitleStyles;
 
   @property({ type: String })
-  number = "";
+  declare number: string;
 
   @property({ type: String })
-  title = "";
+  declare title: string;
 
+  constructor() {
+    super();
+    this.number = "";
+    this.title = "";
+  }
   render() {
     return html`
       <div class="title">

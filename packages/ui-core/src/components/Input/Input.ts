@@ -13,41 +13,53 @@ export class CoreInput extends LitElement {
   private readonly generatedId = `core-input-${++inputId}`;
 
   @property({ type: String })
-  label?: string;
+  declare label: string | undefined;
 
   @property({ type: String })
-  helperText?: string;
+  declare helperText: string | undefined;
 
   @property({ attribute: false })
-  error?: string | boolean;
+  declare error: string | boolean | undefined;
 
   @property({ type: String })
-  value = "";
+  declare value: string;
 
   @property({ type: String })
-  placeholder = "";
+  declare placeholder: string;
 
   @property({ type: String })
-  name = "";
+  declare name: string;
 
   @property({ type: Boolean })
-  disabled = false;
+  declare disabled: boolean;
 
   @property({ type: Boolean })
-  readonly = false;
+  declare readonly: boolean;
 
   @property({ type: Boolean })
-  required = false;
+  declare required: boolean;
 
   @property()
-  autocomplete: TCoreInputAutocomplete = "";
+  declare autocomplete: TCoreInputAutocomplete;
 
   @property()
-  type: TCoreInputType = "text";
+  declare type: TCoreInputType;
 
   @property({ type: String })
-  id = "";
+  declare id: string;
 
+  constructor() {
+    super();
+    this.value = "";
+    this.placeholder = "";
+    this.name = "";
+    this.disabled = false;
+    this.readonly = false;
+    this.required = false;
+    this.autocomplete = "";
+    this.type = "text";
+    this.id = "";
+  }
   private onInput(event: Event) {
     const input = event.target as HTMLInputElement;
 

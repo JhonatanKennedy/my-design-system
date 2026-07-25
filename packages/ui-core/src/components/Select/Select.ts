@@ -11,27 +11,33 @@ export class CoreSelect extends LitElement {
   private readonly generatedId = `core-select-${++selectId}`;
 
   @property({ type: String })
-  label?: string;
+  declare label: string | undefined;
 
   /** Set via JS property assignment: `selectEl.options = ["A", "B"]` */
   @property({ attribute: false })
-  options: string[] = [];
+  declare options: string[];
 
   @property({ type: String })
-  value?: string;
+  declare value: string | undefined;
 
   @property({ type: Boolean })
-  disabled = false;
+  declare disabled: boolean;
 
   @property({ attribute: false })
-  error?: string | boolean;
+  declare error: string | boolean | undefined;
 
   @property({ type: String })
-  helperText?: string;
+  declare helperText: string | undefined;
 
   @property({ type: String })
-  id = "";
+  declare id: string;
 
+  constructor() {
+    super();
+    this.options = [];
+    this.disabled = false;
+    this.id = "";
+  }
   private onChange(event: Event) {
     this.value = (event.target as HTMLSelectElement).value;
 

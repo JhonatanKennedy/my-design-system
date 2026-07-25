@@ -13,11 +13,16 @@ export class CoreTabs extends LitElement {
   static styles = tabsStyles;
 
   @property({ attribute: false })
-  labels: string[] = [];
+  declare labels: string[];
 
   @property({ type: Number, reflect: true })
-  active = 0;
+  declare active: number;
 
+  constructor() {
+    super();
+    this.labels = [];
+    this.active = 0;
+  }
   private selectTab(index: number) {
     if (index === this.active) return;
 

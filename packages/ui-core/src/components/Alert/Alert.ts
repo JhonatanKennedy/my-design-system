@@ -17,17 +17,24 @@ export class CoreAlert extends LitElement {
   static styles = alertStyles;
 
   @property({ type: String })
-  title = "";
+  declare title: string;
 
   @property({ type: String, reflect: true })
-  variant: TAlertCoreVariant = "success";
+  declare variant: TAlertCoreVariant;
 
   @property({ type: Boolean, reflect: true })
-  open = true;
+  declare open: boolean;
 
   @property({ type: Boolean, reflect: true })
-  dismissible = false;
+  declare dismissible: boolean;
 
+  constructor() {
+    super();
+    this.title = "";
+    this.variant = "success";
+    this.open = true;
+    this.dismissible = false;
+  }
   private _handleDismiss() {
     this.dispatchEvent(
       new CustomEvent("dismiss", {

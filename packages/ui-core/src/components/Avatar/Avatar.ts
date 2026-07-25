@@ -24,23 +24,30 @@ export class CoreAvatar extends LitElement {
   static styles = avatarStyles;
 
   @property({ type: String })
-  initials = "";
+  declare initials: string;
 
   @property({ type: Number })
-  index = 0;
+  declare index: number;
 
   @property({ type: Number })
-  size = 48;
+  declare size: number;
 
   @property({ type: String })
-  src?: string;
+  declare src: string | undefined;
 
   @property({ type: String })
-  status?: TCoreAvatarStatus;
+  declare status: TCoreAvatarStatus | undefined;
 
   @state()
-  private imageFailed = false;
+  declare private imageFailed: boolean;
 
+  constructor() {
+    super();
+    this.initials = "";
+    this.index = 0;
+    this.size = 48;
+    this.imageFailed = false;
+  }
   protected updated(changed: Map<string, unknown>) {
     if (changed.has("src")) {
       this.imageFailed = false;

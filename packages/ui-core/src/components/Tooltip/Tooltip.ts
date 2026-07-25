@@ -7,11 +7,16 @@ export class CoreTooltip extends LitElement {
   static styles = tooltipStyles;
 
   @property({ type: String })
-  tip = "";
+  declare tip: string;
 
   @state()
-  private visible = false;
+  declare private visible: boolean;
 
+  constructor() {
+    super();
+    this.tip = "";
+    this.visible = false;
+  }
   private onMouseEnter() {
     this.visible = true;
   }

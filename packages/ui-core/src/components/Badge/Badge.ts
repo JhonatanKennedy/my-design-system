@@ -8,8 +8,12 @@ export class CoreBadge extends LitElement {
   static styles = badgeStyles;
 
   @property({ type: String, reflect: true })
-  variant: TCoreBadgeVariant = "success";
+  declare variant: TCoreBadgeVariant;
 
+  constructor() {
+    super();
+    this.variant = "success";
+  }
   render() {
     return html`<span class="badge-container ${this.variant}"><slot></slot></span>`;
   }

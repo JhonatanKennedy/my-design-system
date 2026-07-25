@@ -7,14 +7,19 @@ export class CoreCard extends LitElement {
   static styles = cardStyles;
 
   @property({ type: Number })
-  rotation = 0;
+  declare rotation: number;
 
   @property({ type: String })
-  accent?: string;
+  declare accent: string | undefined;
 
   @property({ type: Boolean, reflect: true })
-  selected = false;
+  declare selected: boolean;
 
+  constructor() {
+    super();
+    this.rotation = 0;
+    this.selected = false;
+  }
   render() {
     return html`
       <div

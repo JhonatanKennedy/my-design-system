@@ -7,14 +7,19 @@ export class CoreToggle extends LitElement {
   static styles = toggleStyles;
 
   @property({ type: Boolean, reflect: true })
-  checked = false;
+  declare checked: boolean;
 
   @property({ type: String })
-  label?: string;
+  declare label: string | undefined;
 
   @property({ type: Boolean, reflect: true })
-  disabled = false;
+  declare disabled: boolean;
 
+  constructor() {
+    super();
+    this.checked = false;
+    this.disabled = false;
+  }
   private onClick() {
     if (this.disabled) return;
 
