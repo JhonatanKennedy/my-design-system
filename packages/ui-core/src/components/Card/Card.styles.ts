@@ -1,6 +1,24 @@
-import { css, unsafeCSS } from "lit";
-import styles from "./Card.styles.css?inline";
+import { css } from "lit";
 
 export const cardStyles = css`
-  ${unsafeCSS(styles)}
+  .card {
+    background-color: var(--ds-card);
+    border: 3px solid var(--ds-border);
+    box-shadow: 5px 5px 0px var(--ds-border);
+    padding: 1.25rem;
+    position: relative;
+  }
+
+  .selected {
+    border-color: var(--ds-primary);
+    box-shadow: 5px 5px 0px var(--ds-primary);
+  }
+
+  .accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+  }
 `;

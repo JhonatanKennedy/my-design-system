@@ -1,6 +1,44 @@
-import { css, unsafeCSS } from "lit";
-import styles from "./Badge.styles.css?inline";
+import { css } from "lit";
 
 export const badgeStyles = css`
-  ${unsafeCSS(styles)}
+  .badge-container {
+    display: inline-block;
+    border: 2px solid var(--ds-border);
+    padding: 0.2em 1em;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 900;
+  }
+
+  .primary {
+    background-color: var(--ds-primary);
+    color: var(--ds-border);
+  }
+
+  .secondary {
+    background-color: var(--ds-secondary);
+    color: #ffffff;
+  }
+
+  .danger {
+    background-color: var(--ds-destructive);
+    color: #ffffff;
+  }
+
+  .success {
+    background-color: var(--ds-success);
+    color: #ffffff;
+  }
+
+  .neutral {
+    background-color: var(--ds-border);
+    color: var(--ds-primary);
+  }
+
+  .info {
+    background-color: var(--ds-info);
+    color: #ffffff;
+  }
 `;

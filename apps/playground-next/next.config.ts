@@ -9,15 +9,25 @@ const nextConfig: NextConfig = {
     // and gets swapped for the dist-based "publishConfig.exports" only when
     // actually published to npm.
     //
-    // ui-core's source uses a couple of Vite-only import specifiers (e.g.
-    // "./Alert.styles.css?inline") that plain tsc/Next's typecheck step
-    // doesn't understand, since it isn't running through Vite. The published
-    // dist/index.d.ts these packages ship has none of that - it's a flat,
-    // rolled-up declaration file - so real consumers installing from npm
-    // never hit this. It only shows up here because this playground exists
-    // to validate the workspace-source path itself. Turbopack's actual
-    // module compilation (the thing that matters - does the client boundary
-    // work at runtime) already succeeds independent of this flag.
+    // ui-core's component styles used to rely on a Vite-only import specifier
+    // ("./Alert.styles.css?inline") to pull raw CSS text into Lit's
+    // unsafeCSS(). Turbopack doesn't support that convention: it silently
+    // extracted the CSS into its own stylesheet chunk instead of returning it
+    // as a string, and that chunk was never linked into the page anyway - so
+    // every Shadow DOM component rendered unstyled. The styles are now
+    // authored directly as `css` tagged template literals in each
+    // Component.styles.ts, so that particular mismatch is gone.
+    //
+    // ignoreBuildErrors stays on for a separate, unrelated reason: ui-core's
+    // source imports sibling modules with an explicit ".ts" extension (e.g.
+    // "./Alert.styles.ts"), which plain tsc rejects unless
+    // "allowImportingTsExtensions" is set. The published dist/index.d.ts
+    // these packages ship is a flat, rolled-up declaration file with none of
+    // that, so real consumers installing from npm never hit this - it only
+    // shows up here because this playground validates the workspace-source
+    // path itself. Turbopack's actual module compilation (the thing that
+    // matters - does the client boundary work at runtime) already succeeds
+    // independent of this flag.
     ignoreBuildErrors: true,
   },
 };

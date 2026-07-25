@@ -1,6 +1,67 @@
-import { css, unsafeCSS } from "lit";
-import styles from "./Select.styles.css?inline";
+import { css } from "lit";
 
 export const selectStyles = css`
-  ${unsafeCSS(styles)}
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .label {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--ds-border);
+  }
+
+  .select {
+    box-sizing: border-box;
+    height: 50px;
+    border: 3px solid var(--ds-border);
+    background-color: var(--ds-input-background);
+    color: var(--ds-foreground);
+    padding: 0 2.5rem 0 1rem;
+    font-weight: 500;
+    font-family: "Comic Neue", sans-serif;
+    line-height: 1.5;
+    transition: all 0.15s ease;
+    outline: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230A0A0A' stroke-width='2.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .select:focus {
+    outline: none;
+    box-shadow: 4px 4px 0px var(--ds-border);
+    transform: translate(-1px, -1px);
+  }
+
+  .select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--ds-muted);
+  }
+
+  .select-error {
+    border-color: var(--ds-accent);
+  }
+
+  .select-error:focus {
+    box-shadow: 4px 4px 0px var(--ds-accent);
+  }
+
+  .helper-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--ds-muted-foreground);
+  }
+
+  .error-message {
+    color: var(--ds-accent);
+  }
 `;

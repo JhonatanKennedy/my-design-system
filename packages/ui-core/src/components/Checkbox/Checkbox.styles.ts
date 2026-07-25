@@ -1,6 +1,57 @@
-import { css, unsafeCSS } from "lit";
-import styles from "./Checkbox.styles.css?inline";
+import { css } from "lit";
 
 export const checkboxStyles = css`
-  ${unsafeCSS(styles)}
+  .wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .wrapper-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    padding: 0;
+    background: var(--ds-input-background, #fff);
+    border: 3px solid var(--ds-border);
+    box-shadow: 2px 2px 0 var(--ds-border);
+    transition:
+      background 150ms ease,
+      box-shadow 75ms ease,
+      transform 75ms ease;
+    cursor: pointer;
+  }
+
+  .box:disabled {
+    cursor: not-allowed;
+  }
+
+  .box-checked {
+    background: var(--ds-primary);
+  }
+
+  .box:active:not(:disabled) {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 var(--ds-border);
+  }
+
+  .check {
+    color: var(--ds-primary-foreground, #fff);
+  }
+
+  .label {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
 `;

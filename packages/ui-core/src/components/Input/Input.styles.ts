@@ -1,6 +1,63 @@
-import { css, unsafeCSS } from "lit";
-import styles from "./Input.styles.css?inline";
+import { css } from "lit";
 
 export const inputStyles = css`
-  ${unsafeCSS(styles)}
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .label {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--ds-border);
+  }
+
+  .input {
+    box-sizing: border-box;
+    height: 50px;
+    border: 3px solid var(--ds-border);
+    background-color: var(--ds-input-background);
+    padding: 0 1rem;
+    font-weight: 500;
+    font-family: "Comic Neue", sans-serif;
+    line-height: 1.5;
+    transition: all 0.15s ease;
+
+    &::placeholder {
+      color: var(--ds-muted-foreground);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 4px 4px 0px var(--ds-border);
+      transform: translate(-1px, -1px);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background-color: var(--ds-muted);
+    }
+  }
+
+  .inputError {
+    border-color: var(--ds-accent);
+
+    &:focus {
+      box-shadow: 4px 4px 0px var(--ds-accent);
+    }
+  }
+
+  .helperText {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--ds-muted-foreground);
+  }
+
+  .errorMessage {
+    color: var(--ds-accent);
+  }
 `;

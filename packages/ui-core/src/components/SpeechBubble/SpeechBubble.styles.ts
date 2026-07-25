@@ -1,6 +1,61 @@
-import { css, unsafeCSS } from "lit";
-import styles from "./SpeechBubble.styles.css?inline";
+import { css } from "lit";
 
 export const speechBubbleStyles = css`
-  ${unsafeCSS(styles)}
+  .bubble {
+    --bubble-bg: #ffffff;
+
+    position: relative;
+    padding: 1rem;
+
+    background: var(--bubble-bg);
+
+    border: 3px solid var(--ds-border);
+    box-shadow: 4px 4px 0 var(--ds-border);
+  }
+
+  .tail-outer {
+    position: absolute;
+    bottom: -17px;
+
+    width: 0;
+    height: 0;
+    display: block;
+
+    border-top: 18px solid var(--ds-border);
+  }
+
+  .tail-outer-left {
+    left: 20px;
+    border-left: 14px solid var(--ds-border);
+    border-right: 4px solid transparent;
+  }
+
+  .tail-outer-right {
+    right: 20px;
+    border-left: 4px solid transparent;
+    border-right: 14px solid var(--ds-border);
+  }
+
+  .tail-inner {
+    position: absolute;
+    bottom: -12px;
+
+    width: 0;
+    height: 0;
+    display: block;
+
+    border-top: 14px solid var(--bubble-bg);
+  }
+
+  .tail-inner-left {
+    left: 23px;
+    border-left: 11px solid transparent;
+    border-right: 2px solid transparent;
+  }
+
+  .tail-inner-right {
+    right: 23px;
+    border-left: 2px solid transparent;
+    border-right: 11px solid transparent;
+  }
 `;

@@ -1,6 +1,69 @@
-import { css, unsafeCSS } from "lit";
-import styles from "./Alert.styles.css?inline";
+import { css } from "lit";
 
 export const alertStyles = css`
-  ${unsafeCSS(styles)}
+  .alert {
+    border: 3px solid var(--ds-border);
+    box-shadow: 4px 4px 0px var(--ds-border);
+    padding: 1rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .icon {
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .dismiss {
+    background: none;
+    border: none;
+    padding: 0.125rem;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.7;
+    flex-shrink: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .title {
+    font-weight: var(--ds-font-weight-medium);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    margin-bottom: 0.125rem;
+    letter-spacing: 0.02em;
+  }
+
+  .message {
+    font-size: 0.875rem;
+    font-weight: var(--ds-font-weight-medium);
+    opacity: 0.9;
+  }
+
+  .info {
+    background-color: var(--ds-info);
+    color: var(--ds-info-foreground);
+  }
+
+  .warning {
+    background-color: var(--ds-primary);
+    color: var(--ds-primary-foreground);
+  }
+
+  .danger {
+    background-color: var(--ds-destructive);
+    color: var(--ds-destructive-foreground);
+  }
+
+  .success {
+    background-color: var(--ds-success);
+    color: var(--ds-success-foreground);
+  }
 `;

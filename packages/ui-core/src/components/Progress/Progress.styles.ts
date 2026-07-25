@@ -1,6 +1,51 @@
-import { css, unsafeCSS } from "lit";
-import styles from "./Progress.styles.css?inline";
+import { css } from "lit";
 
 export const progressStyles = css`
-  ${unsafeCSS(styles)}
+  .label {
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.375rem;
+  }
+
+  .track {
+    width: 100%;
+    height: 1.3rem;
+    border: 3px solid var(--ds-border);
+    background-color: var(--ds-card);
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .fill {
+    height: 100%;
+    border-right: 3px solid var(--ds-border);
+    transition: all 500ms ease;
+  }
+
+  .indeterminate .fill {
+    animation: ds-progress-indeterminate 1.2s ease-in-out infinite;
+  }
+
+  @keyframes ds-progress-indeterminate {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
+  }
+
+  .value {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
 `;
