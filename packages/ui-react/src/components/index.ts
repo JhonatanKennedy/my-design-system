@@ -12,3 +12,4 @@ export * from "./SpeechBubble";
 export * from "./Select";
 export * from "./Avatar";
 export * from "./Tooltip";
+export * from "./Table";

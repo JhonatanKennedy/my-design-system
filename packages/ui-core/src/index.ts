@@ -14,6 +14,7 @@ export { CoreToggle } from "./components/Toggle";
 export { CoreSelect } from "./components/Select";
 export { CoreSectionTitle } from "./components/SectionTitle";
 export { CoreProgress } from "./components/Progress";
+export { CoreTable } from "./components/Table";
 
 // COLOR TOKENS
 export {
@@ -57,3 +58,9 @@ export type {
   TCoreProgressVariant,
   TCoreProgressProps,
 } from "./components/Progress/Progress.types";
+export type {
+  TCoreTableProps,
+  TCoreTableColumn,
+  TCoreTableRow,
+  TCoreTableAlign,
+} from "./components/Table/Table.types";
