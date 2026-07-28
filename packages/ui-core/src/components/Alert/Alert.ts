@@ -1,7 +1,7 @@
 import { LitElement, html, nothing } from "lit";
 import { Info, AlertTriangle, X, Check } from "lucide-static";
 import { customElement, property } from "lit/decorators.js";
-import { alertStyles } from "./Alert.styles.ts";
+import { alertStyles } from "./Alert.styles";
 import type { TAlertCoreVariant } from "./Alert.types";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 

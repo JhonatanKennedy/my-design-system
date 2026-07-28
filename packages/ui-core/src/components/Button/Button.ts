@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { buttonStyles } from "./Button.styles.ts";
+import { buttonStyles } from "./Button.styles";
 import type { TCoreButtonVariant, TCoreButtonSize } from "./Button.types";
 
 @customElement("core-button")

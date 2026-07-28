@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { badgeStyles } from "./Badge.styles.ts";
+import { badgeStyles } from "./Badge.styles";
 import type { TCoreBadgeVariant } from "./Badge.types.ts";
 
 @customElement("core-badge")
