@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-core
 
+## 0.3.1
+
+### Patch Changes
+
+- dba6567: add table component
+
 ## 0.3.0
 
 ### Minor Changes

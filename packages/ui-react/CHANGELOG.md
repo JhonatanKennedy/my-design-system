@@ -1,5 +1,13 @@
 # @jhonatankennedy/ui-react
 
+## 0.3.1
+
+### Patch Changes
+
+- dba6567: add table component
+- Updated dependencies [dba6567]
+  - @jhonatankennedy/ui-core@0.3.1
+
 ## 0.3.0
 
 ### Minor Changes
