@@ -1,5 +1,12 @@
 # @jhonatankennedy/playground-next
 
+## 0.1.9
+
+### Patch Changes
+
+- Updated dependencies
+  - @jhonatankennedy/ui-next@0.6.0
+
 ## 0.1.8
 
 ### Patch Changes
