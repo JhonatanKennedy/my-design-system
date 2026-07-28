@@ -1,5 +1,16 @@
 # @jhonatankennedy/ui-react
 
+## 0.3.0
+
+### Minor Changes
+
+- 1cbec58: Add a new `Table` component (`core-table` / `<Table />`). Simple, data-driven table that renders a header and body from `columns`/`rows` props, with per-column alignment, an optional caption, and an empty state. No built-in sorting/pagination — intended as the minimal building block for those to be layered on top later.
+
+### Patch Changes
+
+- Updated dependencies [1cbec58]
+  - @jhonatankennedy/ui-core@0.3.0
+
 ## 0.2.6
 
 ### Patch Changes
