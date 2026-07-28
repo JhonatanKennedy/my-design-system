@@ -2,33 +2,6 @@
   "name": "@jhonatankennedy/playground-next",
   "version": "0.1.0",
   "private": true,
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "publishConfig": {
-    "exports": {
-      ".": {
-        "types": "./dist/index.d.ts",
-        "import": "./dist/index.js"
-      },
-      "./styles.css": "./dist/index.css",
-      "./styles/reset.css": "./dist/index.css"
-    }
-  },
-  "exports": {
-    ".": "./src/index.ts",
-    "./styles.css": "./src/tokens.ts",
-    "./styles/reset.css": "./src/styles.ts"
-  },
-  "sideEffects": [
-    "./dist/styles/reset.css",
-    "./dist/index.css",
-    "./src/styles.ts",
-    "./src/tokens.ts"
-  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -37,6 +10,7 @@
   },
   "dependencies": {
     "@jhonatankennedy/ui-next": "workspace:*",
+    "lucide-react": "0.487.0",
     "next": "16.2.11",
     "react": "19.2.4",
     "react-dom": "19.2.4"
@@ -47,6 +21,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.11",
+    "sass": "^1.101.0",
     "typescript": "^5"
   }
 }

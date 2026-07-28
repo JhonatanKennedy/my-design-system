@@ -1,30 +1,47 @@
-// Deliberately NOT a client component - no "use client" here. The point of
-// this page is to prove @jhonatankennedy/ui-next can be imported directly
-// into a Server Component tree without the app needing its own client
-// boundary, since ui-next already ships one.
-import { Button, Badge, Alert, primaryColor, infoColor } from "@jhonatankennedy/ui-next";
+import { NavBar } from "./components/layout/NavBar";
+import { Hero } from "./components/layout/Hero";
+import { Footer } from "./components/layout/Footer";
+import { ColorsSection } from "./components/sections/ColorsSection";
+import { TypographySection } from "./components/sections/TypographySection";
+import { ButtonsSection } from "./components/sections/ButtonsSection";
+import { CardsSection } from "./components/sections/CardsSection";
+import { BadgesSection } from "./components/sections/BadgesSection";
+import { FormsSection } from "./components/sections/FormsSection";
+import { AlertsSection } from "./components/sections/AlertsSection";
+import { BubblesSection } from "./components/sections/BubblesSection";
+import { ControlsSection } from "./components/sections/ControlsSection";
+import { AvatarTooltipsSection } from "./components/sections/AvatarTooltipsSection";
+import { TabsSection } from "./components/sections/TabsSection";
+import { TableSection } from "./components/sections/TableSection";
 
+// Server Component: proves the full ui-next playground page - now mirroring
+// playground-react's App.tsx section-by-section - can be composed straight
+// from a Server Component tree. Only the sections that actually need
+// interactivity (NavBar, FormsSection, AlertsSection, ControlsSection,
+// TableSection's HeroTable) declare "use client" themselves; everything
+// else here stays a Server Component.
 export default function Home() {
   return (
-    <main style={{ padding: 32, display: "flex", flexDirection: "column", gap: 16 }}>
-      <h1>@jhonatankennedy/ui-next - Server Component smoke test</h1>
+    <div className="app">
+      <NavBar />
+      <Hero />
 
-      <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-        <Button variant="primary">Primary</Button>
-        <Button variant="info">Info</Button>
-        <Badge variant="success">Shipped</Badge>
+      <div className="app__content">
+        <ColorsSection />
+        <TypographySection />
+        <ButtonsSection />
+        <CardsSection />
+        <BadgesSection />
+        <FormsSection />
+        <AlertsSection />
+        <BubblesSection />
+        <ControlsSection />
+        <AvatarTooltipsSection />
+        <TabsSection />
+        <TableSection />
       </div>
 
-      <Alert variant="info">
-        This alert, the buttons, and the badge above are Lit custom elements wrapped by ui-react,
-        rendered from a page.tsx with no &quot;use client&quot; directive of its own.
-      </Alert>
-
-      <p>
-        Token color outside the design system, via a plain style prop:{" "}
-        <span style={{ color: primaryColor, fontWeight: 700 }}>primaryColor</span> /{" "}
-        <span style={{ color: infoColor, fontWeight: 700 }}>infoColor</span>
-      </p>
-    </main>
+      <Footer />
+    </div>
   );
 }

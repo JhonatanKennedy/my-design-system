@@ -311,6 +311,9 @@ importers:
       "@jhonatankennedy/ui-next":
         specifier: workspace:*
         version: link:../../packages/ui-next
+      lucide-react:
+        specifier: 0.487.0
+        version: 0.487.0(react@19.2.4)
       next:
         specifier: 16.2.11
         version: 16.2.11(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sass@1.101.0)
@@ -336,6 +339,9 @@ importers:
       eslint-config-next:
         specifier: 16.2.11
         version: 16.2.11(@typescript-eslint/parser@8.62.1(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3))(eslint@9.39.5(jiti@2.7.0))(typescript@5.9.3)
+      sass:
+        specifier: ^1.101.0
+        version: 1.101.0
       typescript:
         specifier: ^5
         version: 5.9.3
@@ -9965,6 +9971,10 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lucide-react@0.487.0(react@19.2.4):
+    dependencies:
+      react: 19.2.4
 
   lucide-react@0.487.0(react@19.2.7):
     dependencies:
