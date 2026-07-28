@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-core
 
+## 0.4.0
+
+### Minor Changes
+
+- 3571479: remove unecessary entries and fix the src layout
+
 ## 0.3.1
 
 ### Patch Changes
