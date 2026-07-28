@@ -15,24 +15,16 @@
         "types": "./dist/index.d.ts",
         "import": "./dist/index.js"
       },
-      "./styles.css": "./dist/index.css",
-      "./styles/reset.css": "./dist/styles/reset.css"
+      "./styles.css": "./dist/index.css"
     }
   },
   "exports": {
     ".": "./src/index.ts",
-    "./styles.css": "./src/tokens.ts",
-    "./styles/reset.css": "./src/reset.ts"
+    "./styles.css": "./src/styles.ts"
   },
-  "sideEffects": [
-    "./dist/index.css",
-    "./dist/styles/reset.css",
-    "./src/tokens.ts",
-    "./src/reset.ts"
-  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && pnpm build:styles",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",

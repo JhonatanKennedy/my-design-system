@@ -25,8 +25,8 @@ export {
   destructiveColor,
   successColor,
   infoColor,
-} from "./tokens.colors";
-export type { TDsColorRole } from "./tokens.colors";
+} from "./styles/tokens/tokens.colors";
+export type { TDsColorRole } from "./styles/tokens/tokens.colors";
 
 // TYPES
 export type {

@@ -3,6 +3,7 @@
 @use "themes/dark" as dark;
 @use "mixins" as m;
 @use "_fonts.scss";
+@use "reset.scss";
 
 @forward "tokens";
 
