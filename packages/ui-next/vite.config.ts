@@ -26,7 +26,6 @@ export default defineConfig({
           "react",
           "react-dom",
           "next",
-          "@jhonatankennedy/ui-core",
           "@jhonatankennedy/ui-react",
           "@lit/react",
           "lit",

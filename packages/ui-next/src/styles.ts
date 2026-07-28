@@ -1,1 +1,1 @@
-import "@jhonatankennedy/ui-core/styles.css";
+import "@jhonatankennedy/ui-react/styles.css";

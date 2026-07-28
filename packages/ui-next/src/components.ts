@@ -1,5 +1,3 @@
-"use client";
-
 import type { ComponentProps } from "react";
 import type * as UiReact from "@jhonatankennedy/ui-react";
 import { clientOnlyComponent } from "./lazy";
