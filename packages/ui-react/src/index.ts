@@ -1,7 +1,7 @@
+import "@jhonatankennedy/ui-core/styles.css";
+
 export * from "./components";
 export * from "./hooks/useTheme";
-
-export * from "./styles.ts";
 
 export {
   dsColor,

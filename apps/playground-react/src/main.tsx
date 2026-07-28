@@ -1,6 +1,5 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "@jhonatankennedy/ui-react/styles/reset.css";
 import "@jhonatankennedy/ui-react/styles.css";
 import App from "./App.tsx";
 
