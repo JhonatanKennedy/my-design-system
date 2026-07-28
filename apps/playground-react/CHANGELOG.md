@@ -1,5 +1,15 @@
 # @jhonatankennedy/playground-react
 
+## 0.1.0
+
+### Minor Changes
+
+- ad3d0ee: remove unecessary entries and fix the src layout on ui-react
+
+### Patch Changes
+
+- @jhonatankennedy/ui-react@0.3.2
+
 ## 0.0.10
 
 ### Patch Changes
