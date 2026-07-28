@@ -65,3 +65,48 @@ describe("core-table", () => {
     expect(caption).toBeNull();
   });
 });
+
+describe("core-table with a custom column", () => {
+  let el: CoreTable;
+
+  beforeEach(async () => {
+    el = document.createElement("core-table") as CoreTable;
+    el.columns = [
+      { key: "name", label: "Name" },
+      { key: "status", label: "Status", align: "center", custom: true },
+    ];
+    el.rows = [
+      { name: "Ada Lovelace", status: "Active" },
+      { name: "Grace Hopper", status: "Retired" },
+    ];
+    document.body.appendChild(el);
+    await el.updateComplete;
+  });
+
+  it("renders a named slot for each row in the custom column", () => {
+    expect(el.shadowRoot?.querySelector('slot[name="cell-0-status"]')).not.toBeNull();
+    expect(el.shadowRoot?.querySelector('slot[name="cell-1-status"]')).not.toBeNull();
+  });
+
+  it("does not render a slot for a regular column", () => {
+    expect(el.shadowRoot?.querySelector('td slot[name^="cell-0-name"]')).toBeNull();
+  });
+
+  it("falls back to the row's raw value when nothing is projected", () => {
+    const slot = el.shadowRoot?.querySelector('slot[name="cell-0-status"]') as HTMLSlotElement;
+    expect(slot.assignedNodes().length).toBe(0);
+    expect(slot.textContent?.trim()).toBe("Active");
+  });
+
+  it("projects light DOM content assigned to the matching slot", async () => {
+    const badge = document.createElement("span");
+    badge.setAttribute("slot", "cell-0-status");
+    badge.textContent = "🟢 Active";
+    el.appendChild(badge);
+    await el.updateComplete;
+
+    const slot = el.shadowRoot?.querySelector('slot[name="cell-0-status"]') as HTMLSlotElement;
+    const assigned = slot.assignedNodes({ flatten: true });
+    expect(assigned).toContain(badge);
+  });
+});

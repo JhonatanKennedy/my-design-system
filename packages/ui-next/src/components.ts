@@ -50,6 +50,10 @@ export const SpeechBubble = clientOnlyComponent<ComponentProps<typeof UiReact.Sp
   import("@jhonatankennedy/ui-react").then((m) => m.SpeechBubble)
 );
 
+export const Table = clientOnlyComponent<ComponentProps<typeof UiReact.Table>>(() =>
+  import("@jhonatankennedy/ui-react").then((m) => m.Table)
+);
+
 export const Tabs = clientOnlyComponent<ComponentProps<typeof UiReact.Tabs>>(() =>
   import("@jhonatankennedy/ui-react").then((m) => m.Tabs)
 );

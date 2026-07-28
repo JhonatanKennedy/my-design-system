@@ -53,9 +53,3 @@ export const HEROES: THero[] = [
     status: "MIA",
   },
 ];
-
-/** Which Avatar palette slot (0-4) each hero uses, kept stable across sorts. */
-export const HERO_AVATAR_INDEX: Record<string, number> = HEROES.reduce(
-  (acc, hero, i) => ({ ...acc, [hero.name]: i }),
-  {}
-);

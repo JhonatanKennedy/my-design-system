@@ -7,6 +7,7 @@ describe("@jhonatankennedy/ui-next", () => {
     expect(UiNext.Badge).toBeDefined();
     expect(UiNext.Alert).toBeDefined();
     expect(UiNext.Tabs).toBeDefined();
+    expect(UiNext.Table).toBeDefined();
   });
 
   it("re-exports the useTheme hook", () => {
