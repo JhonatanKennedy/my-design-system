@@ -1,5 +1,14 @@
 # @jhonatankennedy/ui-next
 
+## 0.1.2
+
+### Patch Changes
+
+- dba6567: add table component
+- Updated dependencies [dba6567]
+  - @jhonatankennedy/ui-core@0.3.1
+  - @jhonatankennedy/ui-react@0.3.1
+
 ## 0.1.1
 
 ### Patch Changes
