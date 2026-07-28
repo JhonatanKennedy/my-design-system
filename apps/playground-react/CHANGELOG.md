@@ -1,5 +1,13 @@
 # @jhonatankennedy/playground-react
 
+## 0.1.1
+
+### Patch Changes
+
+- 4076e28: Swap the bespoke hand-rolled hero table for the shared `Table` component, using its new custom-render support to keep the class/status badges.
+- Updated dependencies [4076e28]
+  - @jhonatankennedy/ui-react@0.4.0
+
 ## 0.1.0
 
 ### Minor Changes

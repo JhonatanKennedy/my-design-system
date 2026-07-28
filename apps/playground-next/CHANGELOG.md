@@ -1,5 +1,13 @@
 # @jhonatankennedy/playground-next
 
+## 0.1.6
+
+### Patch Changes
+
+- 4076e28: Swap the bespoke hand-rolled hero table for the shared `Table` component, using its new custom-render support to keep the class/status badges.
+- Updated dependencies [4076e28]
+  - @jhonatankennedy/ui-next@0.4.0
+
 ## 0.1.5
 
 ### Patch Changes
