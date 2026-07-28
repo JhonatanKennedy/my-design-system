@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-next
 
+## 0.4.1
+
+### Patch Changes
+
+- @jhonatankennedy/ui-react@0.4.1
+
 ## 0.4.0
 
 ### Minor Changes

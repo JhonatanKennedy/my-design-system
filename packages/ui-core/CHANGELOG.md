@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-core
 
+## 0.6.0
+
+### Minor Changes
+
+- ae29981: try to fix the typescript import on next
+
 ## 0.5.0
 
 ### Minor Changes
