@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-next
 
+## 0.5.0
+
+### Minor Changes
+
+- test to see pnpm working
+
 ## 0.4.1
 
 ### Patch Changes

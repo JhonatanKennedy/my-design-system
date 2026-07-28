@@ -2,4 +2,4 @@
 "@jhonatankennedy/ui-next": minor
 ---
 
-test to see pnpm working
+try to fix types on ui-next
