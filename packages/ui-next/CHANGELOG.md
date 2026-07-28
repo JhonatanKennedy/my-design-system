@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-next
 
+## 0.2.0
+
+### Minor Changes
+
+- ff85a09: try to make compatible with ui-next
+
 ## 0.1.3
 
 ### Patch Changes
