@@ -16,12 +16,17 @@
         "types": "./dist/index.d.ts",
         "import": "./dist/index.js"
       },
+      "./tokens": {
+        "types": "./dist/tokens.d.ts",
+        "import": "./dist/tokens.js"
+      },
       "./styles.css": "./dist/index.css"
     }
   },
   "exports": {
     ".": "./src/index.ts",
-    "./styles.css": "./src/styles.ts"
+    "./styles.css": "./src/styles.ts",
+    "./tokens": "./src/tokens.ts"
   },
   "scripts": {
     "dev": "vite",
