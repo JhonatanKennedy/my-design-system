@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-next
 
+## 0.6.1
+
+### Patch Changes
+
+- c31b0f0: fix export css
+
 ## 0.6.0
 
 ### Minor Changes
