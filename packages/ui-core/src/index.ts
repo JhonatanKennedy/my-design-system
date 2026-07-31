@@ -16,18 +16,6 @@ export { CoreSectionTitle } from "./components/SectionTitle";
 export { CoreProgress } from "./components/Progress";
 export { CoreTable } from "./components/Table";
 
-// COLOR TOKENS
-export {
-  dsColor,
-  primaryColor,
-  secondaryColor,
-  accentColor,
-  destructiveColor,
-  successColor,
-  infoColor,
-} from "./styles/tokens/tokens.colors";
-export type { TDsColorRole } from "./styles/tokens/tokens.colors";
-
 // TYPES
 export type {
   TCoreButtonProps,

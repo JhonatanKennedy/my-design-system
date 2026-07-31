@@ -5,10 +5,12 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: {
+        index: resolve(__dirname, "src/index.ts"),
+        tokens: resolve(__dirname, "src/tokens.ts"),
+      },
       name: "MyDesignSystemUiCore",
       formats: ["es"],
-      fileName: "index",
     },
     rollupOptions: {
       external: ["lit", "lit-html", "lit-element"],

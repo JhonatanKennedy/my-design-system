@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import * as UiNext from "./index";
+import * as UINextColors from "./tokens";
 
 describe("@jhonatankennedy/ui-next", () => {
   it("re-exports the ui-react components", () => {
@@ -15,7 +16,7 @@ describe("@jhonatankennedy/ui-next", () => {
   });
 
   it("re-exports the design token color constants", () => {
-    expect(UiNext.dsColor).toEqual({
+    expect(UINextColors.dsColor).toEqual({
       primary: "var(--ds-primary)",
       secondary: "var(--ds-secondary)",
       accent: "var(--ds-accent)",
@@ -23,6 +24,6 @@ describe("@jhonatankennedy/ui-next", () => {
       success: "var(--ds-success)",
       info: "var(--ds-info)",
     });
-    expect(UiNext.primaryColor).toBe("var(--ds-primary)");
+    expect(UINextColors.primaryColor).toBe("var(--ds-primary)");
   });
 });

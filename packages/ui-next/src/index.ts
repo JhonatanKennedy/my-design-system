@@ -10,13 +10,3 @@ export * from "./components";
 // src/hooks/useTheme.ts for why.
 export { useTheme } from "./hooks/useTheme";
 export type { TTheme } from "./hooks/useTheme";
-export {
-  dsColor,
-  primaryColor,
-  secondaryColor,
-  accentColor,
-  destructiveColor,
-  successColor,
-  infoColor,
-} from "@jhonatankennedy/ui-react";
-export type { TDsColorRole } from "@jhonatankennedy/ui-react";

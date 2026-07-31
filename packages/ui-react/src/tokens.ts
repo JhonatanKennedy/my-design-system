@@ -6,6 +6,5 @@ export {
   destructiveColor,
   successColor,
   infoColor,
-} from "@jhonatankennedy/ui-react/tokens";
-
-export type { TDsColorRole } from "@jhonatankennedy/ui-react/tokens";
+} from "@jhonatankennedy/ui-core/tokens";
+export type { TDsColorRole } from "@jhonatankennedy/ui-core/tokens";
