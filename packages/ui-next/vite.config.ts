@@ -21,8 +21,9 @@ export default defineConfig({
     },
 
     rollupOptions: {
-      external: (id: string) =>
-        [
+      external: (id: string) => {
+        if (id === "@jhonatankennedy/ui-react/styles.css") return false; // deixa o Vite processar esse CSS
+        return [
           "react",
           "react-dom",
           "next",
@@ -30,7 +31,8 @@ export default defineConfig({
           "@lit/react",
           "lit",
           "lucide-react",
-        ].some((pkg) => id === pkg || id.startsWith(`${pkg}/`)),
+        ].some((pkg) => id === pkg || id.startsWith(`${pkg}/`));
+      },
       output: {
         // Everything re-exported here (Lit custom elements under the hood,
         // hooks touching window/localStorage) only runs in the browser, so
