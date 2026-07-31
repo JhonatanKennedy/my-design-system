@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-next
 
+## 0.6.2
+
+### Patch Changes
+
+- bdb89c2: fix ssr exports and add entry point for statick consts
+
 ## 0.6.1
 
 ### Patch Changes
