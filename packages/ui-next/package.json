@@ -48,6 +48,7 @@
     }
   },
   "dependencies": {
+    "@jhonatankennedy/ui-core": "workspace:*",
     "@jhonatankennedy/ui-react": "workspace:*"
   },
   "devDependencies": {

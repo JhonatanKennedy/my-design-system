@@ -6,6 +6,10 @@ import "@jhonatankennedy/ui-react/styles.css";
 // import these straight into a Server Component tree.
 export * from "./components";
 
+// Auxiliary prop types (TTabItem, TTableColumn, ...) needed to build props
+// for the composite components above - see src/types.ts.
+export * from "./types";
+
 // Reimplemented locally rather than re-exported from ui-react - see
 // src/hooks/useTheme.ts for why.
 export { useTheme } from "./hooks/useTheme";

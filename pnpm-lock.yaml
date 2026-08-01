@@ -434,6 +434,9 @@ importers:
 
   packages/ui-next:
     dependencies:
+      "@jhonatankennedy/ui-core":
+        specifier: workspace:*
+        version: link:../ui-core
       "@jhonatankennedy/ui-react":
         specifier: workspace:*
         version: link:../ui-react
