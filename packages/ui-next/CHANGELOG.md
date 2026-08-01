@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-next
 
+## 0.6.9
+
+### Patch Changes
+
+- 023f12c: fix export types
+
 ## 0.6.8
 
 ### Patch Changes
