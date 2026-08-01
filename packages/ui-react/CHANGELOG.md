@@ -1,5 +1,13 @@
 # @jhonatankennedy/ui-react
 
+## 0.4.5
+
+### Patch Changes
+
+- 73aed04: fix input import
+- Updated dependencies [73aed04]
+  - @jhonatankennedy/ui-core@0.6.4
+
 ## 0.4.4
 
 ### Patch Changes

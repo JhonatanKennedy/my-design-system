@@ -1,5 +1,12 @@
 # @jhonatankennedy/playground-react
 
+## 0.1.6
+
+### Patch Changes
+
+- Updated dependencies [73aed04]
+  - @jhonatankennedy/ui-react@0.4.5
+
 ## 0.1.5
 
 ### Patch Changes

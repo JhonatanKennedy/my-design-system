@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-core
 
+## 0.6.4
+
+### Patch Changes
+
+- 73aed04: fix input import
+
 ## 0.6.3
 
 ### Patch Changes
