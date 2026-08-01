@@ -1,5 +1,11 @@
 # @jhonatankennedy/playground-next
 
+## 0.1.15
+
+### Patch Changes
+
+- @jhonatankennedy/ui-next@0.6.6
+
 ## 0.1.14
 
 ### Patch Changes
