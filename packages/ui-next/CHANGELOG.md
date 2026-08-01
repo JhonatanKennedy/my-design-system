@@ -1,5 +1,15 @@
 # @jhonatankennedy/ui-next
 
+## 0.6.3
+
+### Patch Changes
+
+- de1299a: try fix ssr error by exporting static consts on a ssr file
+- 4f9b132: adjust the token exports
+- Updated dependencies [de1299a]
+- Updated dependencies [4f9b132]
+  - @jhonatankennedy/ui-react@0.4.2
+
 ## 0.6.2
 
 ### Patch Changes
