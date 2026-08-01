@@ -15,18 +15,15 @@ h3,
 h4 {
   font-family: var(--ds-font-family-display);
   font-weight: var(--ds-font-weight-medium);
-  line-height: 1.5;
 }
 
 label,
 button {
   font-weight: var(--ds-font-weight-medium);
-  line-height: 1.5;
 }
 
 input {
   font-weight: var(--ds-font-weight-normal);
-  line-height: 1.5;
   color: var(--ds-foreground);
   background-color: var(--ds-input-background);
   border: 1px solid var(--ds-input-border);

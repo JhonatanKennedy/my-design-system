@@ -1,8 +1,8 @@
+@use "_fonts.scss";
 @use "tokens" as t;
 @use "themes/light" as light;
 @use "themes/dark" as dark;
 @use "mixins" as m;
-@use "_fonts.scss";
 @use "reset.scss";
 
 @forward "tokens";

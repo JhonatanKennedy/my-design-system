@@ -2,4 +2,4 @@
 "@jhonatankennedy/ui-core": patch
 ---
 
-fix css build
+remove line height from reset css

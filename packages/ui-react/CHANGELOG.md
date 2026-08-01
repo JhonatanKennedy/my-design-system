@@ -1,5 +1,12 @@
 # @jhonatankennedy/ui-react
 
+## 0.4.3
+
+### Patch Changes
+
+- Updated dependencies [3f870b4]
+  - @jhonatankennedy/ui-core@0.6.2
+
 ## 0.4.2
 
 ### Patch Changes
