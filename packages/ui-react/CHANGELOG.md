@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-react
 
+## 0.4.7
+
+### Patch Changes
+
+- fix css build
+
 ## 0.4.6
 
 ### Patch Changes
