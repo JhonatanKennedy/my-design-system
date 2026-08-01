@@ -1,5 +1,16 @@
 # @jhonatankennedy/ui-react
 
+## 0.4.2
+
+### Patch Changes
+
+- de1299a: try fix ssr error by exporting static consts on a ssr file
+- 4f9b132: adjust the token exports
+- Updated dependencies [de1299a]
+- Updated dependencies [57b575c]
+- Updated dependencies [4f9b132]
+  - @jhonatankennedy/ui-core@0.6.1
+
 ## 0.4.1
 
 ### Patch Changes

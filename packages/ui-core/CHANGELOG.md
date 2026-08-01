@@ -1,5 +1,13 @@
 # @jhonatankennedy/ui-core
 
+## 0.6.1
+
+### Patch Changes
+
+- de1299a: try fix ssr error by exporting static consts on a ssr file
+- 57b575c: fix reset css
+- 4f9b132: adjust the token exports
+
 ## 0.6.0
 
 ### Minor Changes
