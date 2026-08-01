@@ -1,4 +1,4 @@
-import { LitElement, html } from "lit";
+import { LitElement, html, nothing } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { cardStyles } from "./Card.styles";
 
@@ -29,7 +29,7 @@ export class CoreCard extends LitElement {
         ${
           this.accent
             ? html` <div class="accent" style="background: ${this.accent};"></div> `
-            : null
+            : nothing
         }
 
         <slot></slot>

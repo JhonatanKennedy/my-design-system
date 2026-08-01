@@ -31,12 +31,20 @@ export class CoreSelect extends LitElement {
   declare helperText: string | undefined;
 
   @property({ type: String })
+  declare name: string;
+
+  @property({ type: Boolean })
+  declare required: boolean;
+
+  @property({ type: String })
   declare id: string;
 
   constructor() {
     super();
     this.options = [];
     this.disabled = false;
+    this.name = "";
+    this.required = false;
     this.id = "";
   }
   private onChange(event: Event) {
@@ -64,7 +72,9 @@ export class CoreSelect extends LitElement {
         <select
           id=${selectId}
           class="select ${hasError ? "select-error" : ""}"
+          name=${this.name}
           ?disabled=${this.disabled}
+          ?required=${this.required}
           .value=${this.value ?? ""}
           aria-invalid=${hasError ? "true" : "false"}
           aria-describedby=${message ? messageId : ""}

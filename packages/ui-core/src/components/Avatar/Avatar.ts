@@ -1,4 +1,4 @@
-import { LitElement, html } from "lit";
+import { LitElement, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { avatarStyles } from "./Avatar.styles";
 import type { TCoreAvatarStatus } from "./Avatar.types";
@@ -92,7 +92,7 @@ export class CoreAvatar extends LitElement {
                 </div>
               `
         }
-        ${this.status ? html`<span class="status ${this.status}"></span>` : null}
+        ${this.status ? html`<span class="status ${this.status}"></span>` : nothing}
       </div>
     `;
   }

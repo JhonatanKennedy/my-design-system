@@ -1,2 +1,2 @@
 export { CoreBadge } from "./Badge";
-export type { TBadgeProps, TCoreBadgeVariant } from "./Badge.types";
+export type { TCoreBadgeProps, TBadgeProps, TCoreBadgeVariant } from "./Badge.types";

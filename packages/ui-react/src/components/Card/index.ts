@@ -1,2 +1,2 @@
 export * from "./Card";
-export type { TCardProps } from "@jhonatankennedy/ui-core";
+export type { TCoreCardProps, TCardProps } from "@jhonatankennedy/ui-core";

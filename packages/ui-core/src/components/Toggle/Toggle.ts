@@ -16,10 +16,18 @@ export class CoreToggle extends LitElement {
   @property({ type: Boolean, reflect: true })
   declare disabled: boolean;
 
+  @property({ type: String })
+  declare name: string;
+
+  @property({ type: Boolean })
+  declare required: boolean;
+
   constructor() {
     super();
     this.checked = false;
     this.disabled = false;
+    this.name = "";
+    this.required = false;
   }
   private onClick() {
     if (this.disabled) return;
@@ -42,6 +50,7 @@ export class CoreToggle extends LitElement {
           type="button"
           role="switch"
           aria-checked=${this.checked}
+          aria-required=${this.required ? "true" : "false"}
           ?disabled=${this.disabled}
           class="track ${this.checked ? "track-on" : ""}"
           @click=${this.onClick}

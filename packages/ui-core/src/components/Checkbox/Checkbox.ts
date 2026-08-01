@@ -16,10 +16,18 @@ export class CoreCheckbox extends LitElement {
   @property({ type: Boolean, reflect: true })
   declare disabled: boolean;
 
+  @property({ type: String })
+  declare name: string;
+
+  @property({ type: Boolean })
+  declare required: boolean;
+
   constructor() {
     super();
     this.checked = false;
     this.disabled = false;
+    this.name = "";
+    this.required = false;
   }
   private onClick() {
     if (this.disabled) return;
@@ -48,6 +56,7 @@ export class CoreCheckbox extends LitElement {
           type="button"
           role="checkbox"
           aria-checked=${this.checked}
+          aria-required=${this.required ? "true" : "false"}
           ?disabled=${this.disabled}
           class="box ${this.checked ? "box-checked" : ""}"
           @click=${this.onClick}

@@ -5,4 +5,6 @@ export type TCoreSelectProps = {
   disabled?: boolean;
   error?: string | boolean;
   helperText?: string;
+  name?: string;
+  required?: boolean;
 };

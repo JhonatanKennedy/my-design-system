@@ -2,10 +2,10 @@ import { LitElement, html, nothing } from "lit";
 import { Info, AlertTriangle, X, Check } from "lucide-static";
 import { customElement, property } from "lit/decorators.js";
 import { alertStyles } from "./Alert.styles";
-import type { TAlertCoreVariant } from "./Alert.types";
+import type { TCoreAlertVariant } from "./Alert.types";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 
-const ALERT_ICON: Record<TAlertCoreVariant, string> = {
+const ALERT_ICON: Record<TCoreAlertVariant, string> = {
   info: Info,
   warning: AlertTriangle,
   danger: X,
@@ -21,7 +21,7 @@ export class CoreAlert extends LitElement {
   declare title: string;
 
   @property({ type: String, reflect: true })
-  declare variant: TAlertCoreVariant;
+  declare variant: TCoreAlertVariant;
 
   @property({ type: Boolean, reflect: true })
   declare open: boolean;
