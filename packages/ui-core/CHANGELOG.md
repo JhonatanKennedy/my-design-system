@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-core
 
+## 0.6.2
+
+### Patch Changes
+
+- 3f870b4: fix css build
+
 ## 0.6.1
 
 ### Patch Changes
