@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-core
 
+## 0.6.5
+
+### Patch Changes
+
+- 3325266: small fixies applied
+
 ## 0.6.4
 
 ### Patch Changes
