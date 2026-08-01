@@ -501,6 +501,9 @@ importers:
       "@lit/react":
         specifier: ^1.0.8
         version: 1.0.8(@types/react@19.2.17)
+      lit:
+        specifier: ^3.3.3
+        version: 3.3.3
       lucide-react:
         specifier: 0.487.0
         version: 0.487.0(react@19.2.7)
