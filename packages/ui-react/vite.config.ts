@@ -23,6 +23,15 @@ export default defineConfig({
     },
 
     rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          // força o CSS único do lib build a sempre se chamar index.css
+          if (assetInfo.names?.some((n) => n.endsWith(".css"))) {
+            return "index.css";
+          }
+          return assetInfo.names?.[0] ?? "[name][extname]";
+        },
+      },
       external: [
         "react",
         "@lit/react",

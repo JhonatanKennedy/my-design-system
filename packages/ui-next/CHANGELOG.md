@@ -1,5 +1,13 @@
 # @jhonatankennedy/ui-next
 
+## 0.6.7
+
+### Patch Changes
+
+- 3325266: small fixies applied
+- Updated dependencies [3325266]
+  - @jhonatankennedy/ui-react@0.4.6
+
 ## 0.6.6
 
 ### Patch Changes

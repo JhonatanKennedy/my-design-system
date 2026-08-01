@@ -1,5 +1,13 @@
 # @jhonatankennedy/ui-react
 
+## 0.4.6
+
+### Patch Changes
+
+- 3325266: small fixies applied
+- Updated dependencies [3325266]
+  - @jhonatankennedy/ui-core@0.6.5
+
 ## 0.4.5
 
 ### Patch Changes
