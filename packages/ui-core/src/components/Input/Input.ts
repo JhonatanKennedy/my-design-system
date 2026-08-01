@@ -9,6 +9,7 @@ let inputId = 0;
 @customElement("core-input")
 export class CoreInput extends LitElement {
   static styles = inputStyles;
+  static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
   private readonly generatedId = `core-input-${++inputId}`;
 
@@ -80,6 +81,11 @@ export class CoreInput extends LitElement {
         composed: true,
       })
     );
+  }
+
+  /** Selects the input's text, mirroring native `HTMLInputElement.select()`. */
+  select() {
+    this.shadowRoot?.querySelector("input")?.select();
   }
 
   render() {

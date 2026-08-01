@@ -5,6 +5,7 @@ import { toggleStyles } from "./Toggle.styles";
 @customElement("core-toggle")
 export class CoreToggle extends LitElement {
   static styles = toggleStyles;
+  static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
   @property({ type: Boolean, reflect: true })
   declare checked: boolean;
@@ -36,7 +37,7 @@ export class CoreToggle extends LitElement {
 
   render() {
     return html`
-      <div class="wrapper">
+      <label class="wrapper ${this.disabled ? "wrapper-disabled" : ""}">
         <button
           type="button"
           role="switch"
@@ -48,7 +49,7 @@ export class CoreToggle extends LitElement {
           <span class="thumb ${this.checked ? "thumb-on" : ""}"></span>
         </button>
         ${this.label ? html`<span class="label">${this.label}</span>` : nothing}
-      </div>
+      </label>
     `;
   }
 }

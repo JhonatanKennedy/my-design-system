@@ -6,6 +6,7 @@ import type { TCoreButtonVariant, TCoreButtonSize } from "./Button.types";
 @customElement("core-button")
 export class CoreButton extends LitElement {
   static styles = buttonStyles;
+  static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
   @property({ reflect: true })
   declare variant: TCoreButtonVariant;

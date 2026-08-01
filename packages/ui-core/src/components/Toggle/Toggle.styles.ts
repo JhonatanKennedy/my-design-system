@@ -5,6 +5,13 @@ export const toggleStyles = css`
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .wrapper-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 
   .track {

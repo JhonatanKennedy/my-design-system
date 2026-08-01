@@ -13,7 +13,7 @@ export default defineConfig({
       formats: ["es"],
     },
     rollupOptions: {
-      external: ["lit", "lit-html", "lit-element"],
+      external: [/^lit(\/.*)?$/, /^lit-html(\/.*)?$/, /^lit-element(\/.*)?$/],
       output: {
         assetFileNames: (assetInfo) => {
           // força o CSS único do lib build a sempre se chamar index.css

@@ -7,6 +7,7 @@ let selectId = 0;
 @customElement("core-select")
 export class CoreSelect extends LitElement {
   static styles = selectStyles;
+  static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
   private readonly generatedId = `core-select-${++selectId}`;
 

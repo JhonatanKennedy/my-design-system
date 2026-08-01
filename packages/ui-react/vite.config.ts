@@ -26,7 +26,9 @@ export default defineConfig({
       external: [
         "react",
         "@lit/react",
-        "lit",
+        /^lit(\/.*)?$/,
+        /^lit-html(\/.*)?$/,
+        /^lit-element(\/.*)?$/,
         "lucide-react",
         "react/jsx-dev-runtime",
         "react/jsx-runtime",

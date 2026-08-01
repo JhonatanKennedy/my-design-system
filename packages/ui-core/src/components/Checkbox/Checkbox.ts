@@ -5,6 +5,7 @@ import { checkboxStyles } from "./Checkbox.styles";
 @customElement("core-checkbox")
 export class CoreCheckbox extends LitElement {
   static styles = checkboxStyles;
+  static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
   @property({ type: Boolean, reflect: true })
   declare checked: boolean;

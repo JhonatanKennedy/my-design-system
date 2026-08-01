@@ -15,6 +15,7 @@ const ALERT_ICON: Record<TAlertCoreVariant, string> = {
 @customElement("core-alert")
 export class CoreAlert extends LitElement {
   static styles = alertStyles;
+  static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
   @property({ type: String })
   declare title: string;
