@@ -1,5 +1,11 @@
 # @jhonatankennedy/ui-core
 
+## 0.6.3
+
+### Patch Changes
+
+- remove line height from reset css
+
 ## 0.6.2
 
 ### Patch Changes

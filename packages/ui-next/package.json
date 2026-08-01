@@ -1,7 +1,7 @@
 {
   "name": "@jhonatankennedy/ui-next",
   "private": false,
-  "version": "0.6.4",
+  "version": "0.6.5",
   "type": "module",
   "description": "Next.js-ready client boundary for @jhonatankennedy/ui-react.",
   "files": [
